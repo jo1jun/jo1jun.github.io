@@ -1,0 +1,428 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Kim Yu-Ji</title>
+
+    <meta name="author" content="Kim Yu-Ji">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+    <style>
+      .my_green {
+          color: rgb(61, 161, 84); /* 텍스트 색상 설정 */
+      }
+    </style>
+    
+  </head>
+
+  <body>
+    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr style="padding:0px">
+              <td style="padding:2.5%;width:63%;vertical-align:middle">
+                <p class="name" style="text-align: center;">
+                  Kim Yu-Ji <span style="font-size: 0.5em">(김유지)</span>
+                </p>
+                <p>I'm a Ph.D. candidate at <a href="https://ami.postech.ac.kr/">Algorithmic Machine Intelligence Lab</a> @ POSTECH AI advised by <a href="https://www.overleaf.com/project/5f4779931010600001b2e760">Prof. Tae-Hyun Oh</a>.
+                </p>
+                <p>
+                  I've worked for creating a 3D virtual world for realistic and authentic communication.
+                  My main areas of interest are 3D computer vision, generative model, and multi-modal learning, but not limited to.
+                </p>
+                <p style="text-align:center">
+                  <a href="mailto:ugkim@postech.ac.kr">ugkim@postech.ac.kr</a> &nbsp;/&nbsp;
+                  <a href="https://www.overleaf.com/project/62cab1f3f5a459c50ec6eeef">CV</a> &nbsp;/&nbsp;
+                  <a href="https://scholar.google.com/citations?user=I7k0GkIAAAAJ&hl=ko&oi=sra">Scholar</a> &nbsp;/&nbsp;
+                  <a href="https://github.com/ug-kim">Github</a> &nbsp;/&nbsp;
+                  <a href="https://www.linkedin.com/in/yu-ji-kim-b57022186/">LinkedIn</a> &nbsp;/&nbsp;
+                  <a href="https://twitter.com/ug___k">X</a>
+                </p>
+              </td>
+              <td style="padding:2.5%;width:30%;max-width:30%">
+                <!-- <a href="images/ugkim.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/ugkim.jpg" class="hoverZoomLink"></a> -->
+                <a href="images/ugkim.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 0%;" alt="profile photo" src="images/ugkim.jpg" class="hoverZoomLink"></a>
+              </td>
+            </tr>
+          </tbody></table>
+          
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
+            <tr>
+              <td>
+                <h2>News</h2>
+                <ul>
+                  <!-- <li>
+                    Conference Reviewer: CVPR (2024)
+                  </li> -->
+                  <li>
+                    (11/2024) Our BMVC2024 paper <a href="https://metta3d.github.io/">MeTTA</a> won the best poster award at BMVC 2024.
+                  </li>
+                  <li>
+                    (07/2024)1 paper has been accpted to BVMC 2024.
+                  </li>
+                  <li>
+                    <!-- <strong class="my_green">(04/2024)</strong> I got accepted to <a href="https://iplab.dmi.unict.it/icvss2024/">ICVSS 2024</a> in Sicily, Italy. -->
+                    (04/2024) I got accepted to <a href="https://iplab.dmi.unict.it/icvss2024/">ICVSS 2024</a> in Sicily, Italy.
+                  </li>
+                  <li>
+                    (07/2023) 1 paper has been accepted to ICCV 2023.
+                  </li>
+                  <li>
+                    (07/2022) 1 paper has been accepted to ECCV 2022. 
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody></table>
+          
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+              <tr>
+              <td style="padding:20px;width:100%;vertical-align:middle">
+                <h2>Research</h2>
+                <!-- <p> -->
+                  <!-- My main areas of interest are 3D computer vision, generative model, and multi-modal learning, but not limited to.  -->
+                  <!-- Most of my research is about inferring the physical world (shape, motion, color, light, etc) from images, usually with radiance fields.  -->
+                  <!-- Representative papers are <span class="highlight">highlighted</span>. -->
+                <!-- </p> -->
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+
+
+
+
+    <tr onmouseout="metta_stop()" onmouseover="metta_start()">
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='metta_image'><video  width=100% muted autoplay loop>
+          <source src="images/metta.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video></div>
+          <img src='images/metta.png' width=100%>
+        </div>
+        <script type="text/javascript">
+          function metta_start() {
+            document.getElementById('metta_image').style.opacity = "1";
+          }
+
+          function metta_stop() {
+            document.getElementById('metta_image').style.opacity = "0";
+          }
+          metta_stop()
+        </script>
+      </td>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+        <a href="https://metta3d.github.io/">
+          <span class="papertitle">MeTTA: Single-View to 3D Textured Mesh Reconstruction with Test-Time Adaptation</span>
+        </a>
+        <br>
+        <strong><u>Kim Yu-Ji</u></strong>,
+        Hyunwoo Ha,
+        Kim Youwang,
+        Jaeheung Surh,
+        Hyowon Ha<sup>&dagger;</sup>,
+        Tae-Hyun Oh<sup>&dagger;</sup>
+        <br>
+        <em>BMVC</em>, 2024
+        <br>
+        <a href="https://metta3d.github.io/">Project Page</a>
+        /
+        <a href="https://www.youtube.com/watch?v=62r7kJ2hRZc">Video</a>
+        /
+        <a href="https://arxiv.org/abs/2408.11465">arXiv</a>
+        <br> <span style="color: gray;">- Best Poster Award at BMVC 2024</span>
+        <!-- / -->
+        <!-- <a href="https://arxiv.org/abs/2210.08457">arXiv</a> -->
+        <p></p>
+        <p>
+        Single view to 3D object reconstruction with realistic PBR textures.
+        </p>
+      </td>
+    </tr>
+
+
+
+    <tr onmouseout="uniform_stop()" onmouseover="uniform_start()">
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='uniform'>
+          <img src='images/uniform-attention.png' width=100%>
+        </div>
+        <script type="text/javascript">
+          function uniform_start() {
+            document.getElementById('uniform_image').style.opacity = "1";
+          }
+
+          function uniform_stop() {
+            document.getElementById('uniform_image').style.opacity = "0";
+          }
+          uniform_stop()
+        </script>
+      </td>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+        <a href="https://uniform-attention.github.io/">
+          <span class="papertitle">Scratching Visual Transformer's Back with Uniform Attention</span>
+        </a>
+        <br>
+        Nam Hyeon-Woo,
+        <strong><u>Kim Yu-Ji</u></strong>,
+        Byeongho Heo,
+        Dongyoon Han,
+        Seong Joon Oh,
+        Tae-Hyun Oh
+          <br>
+        <em>ICCV</em>, 2023
+        <br>
+        <a href="https://uniform-attention.github.io/">Project Page</a>
+        /
+        <a href="https://www.youtube.com/watch?v=LAv4sAuuAA0&list=PLRg-WgV5P2lnv2JIo-RyhNPjlGD3aVmLj&index=3">Video</a>
+        /
+        <a href="https://arxiv.org/abs/2210.08457">arXiv</a>
+        <p></p>
+        <p>
+          Infusing dense attention splits the responsibility of interactions; the burden of interactions of self-attention is reduced. 
+        </p>
+      </td>
+    </tr>
+	
+
+    <tr onmouseout="hdr_stop()" onmouseover="hdr_start()">
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='hdr_image'><video  width=100% muted autoplay loop>
+          <source src="images/hdr.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video></div>
+          <img src='images/hdr.png' width=100%>
+        </div>
+        <script type="text/javascript">
+          function hdr_start() {
+            document.getElementById('hdr_image').style.opacity = "1";
+          }
+
+          function hdr_stop() {
+            document.getElementById('hdr_image').style.opacity = "0";
+          }
+          hdr_stop()
+        </script>
+      </td>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+        <a href="https://hdr-plenoxels.github.io/">
+          <span class="papertitle">HDR-Plenoxels: Self-Calibrating High Dynamic Range Radiance Fields</span>
+        </a>
+        <br>
+        Kim Jun-Seong*,
+        <strong><u>Kim Yu-Ji</u></strong>*,
+        Moon Ye-Bin,
+        Tae-Hyun Oh
+        <br>
+        <em>ECCV</em>, 2022
+        <br>
+        <a href="https://hdr-plenoxels.github.io/">Project Page</a>
+        /
+        <a href="https://www.youtube.com/watch?v=LgZkVxgbOII&list=PLRg-WgV5P2lnv2JIo-RyhNPjlGD3aVmLj&index=5">Video</a>
+        /
+        <a href="https://arxiv.org/abs/2208.06787">arXiv</a>
+        <p></p>
+        <p>
+        <H2></H2>High dynamic range (HDR) radiance fields that learn a plenoptic function of 3D HDR radiance fields, geometry information, and varying camera settings inherent in 2D low dynamic range (LDR) images.
+        </p>
+      </td>
+    </tr>
+
+	
+<!-- 	
+    <tr onmouseout="recon_stop()" onmouseover="recon_stopt()" bgcolor="#ffffd0">
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='recon_image'><video  width=100% height=100% muted autoplay loop>
+          <source src="images/recon.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video></div>
+          <img src='images/recon.png' width="160">
+        </div>
+        <script type="text/javascript">
+          function recon_start() {
+            document.getElementById('recon_image').style.opacity = "1";
+          }
+
+          function recon_stop() {
+            document.getElementById('recon_image').style.opacity = "0";
+          }
+          recon_stop()
+        </script>
+      </td>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+        <a href="https://reconfusion.github.io/">
+			<span class="papertitle">ReconFusion: 3D Reconstruction with Diffusion Priors</span>
+        </a>
+        <br>
+        <a href="https://www.cs.columbia.edu/~rundi/">Rundi Wu*</a>,
+		<a href="https://bmild.github.io/">Ben Mildenhall*</a>,
+        <a href="https://henzler.github.io/">Philipp Henzler</a>,
+        <a href="https://keunhong.com/">Keunhong Park</a>,
+        <a href="https://ruiqigao.github.io/">Ruiqi Gao</a>,
+        <a href="https://scholar.google.com/citations?user=_pKKv2QAAAAJ&hl=en/">Daniel Watson</a>,
+        <a href="https://pratulsrinivasan.github.io/">Pratul P. Srinivasan</a>,
+        <a href="https://dorverbin.github.io/">Dor Verbin</a>,
+		<strong>Jonathan T. Barron</strong>,
+        <a href="https://poolio.github.io/">Ben Poole</a>,
+        <a href="https://holynski.org/">Aleksander Holynski*</a>
+        <br>
+        <em>CVPR</em>, 2024
+        <br>
+        <a href="https://reconfusion.github.io/">project page</a>
+        /
+        <a href="https://arxiv.org/abs/">arXiv</a>
+        <p></p>
+        <p>
+        Using a multi-image diffusion model as a regularizer lets you recover high-quality radiance fields from just a handful of images.
+        </p>
+      </td>
+    </tr> -->
+
+
+          </tbody></table>
+
+          <style>
+            .list-container {
+                display: flex;
+                justify-content: space-between;
+                list-style: none;
+                padding: 0;
+            }
+            .list-container li {
+                width: 50%; /* 각 항목의 너비를 반으로 나눠줍니다. */
+            }
+            .left-list {
+                text-align: left;
+            }
+            .right-list {
+                text-align: right;
+            }
+        </style>
+          
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
+            <tr>
+              <td>
+                <h2>Education</h2>
+                <ul>
+                  <li>
+                    <div style="display: flex; justify-content: space-between;">
+                      <div style="text-align: right;">
+                          <b>POSTECH - Algorithmic Machine Intelligence Lab, Pohang, Korea</b>
+                      </div>
+                      <div style="text-align: left;">
+                          Sep 2021 - Present
+                      </div>
+                    </div>
+                    <div>
+                        Integrated M.S. and Ph.D. in AI, advised by Prof. Tae-Hyun Oh.
+                    </div>
+                  <br>
+                  </li>
+                  <li>
+                    <div style="display: flex; justify-content: space-between;">
+                      <div style="text-align: right;">
+                          <b>DGIST, Daegu, Korea</b>
+                      </div>
+                      <div style="text-align: left;">
+                          Mar 2016 - Aug 2021
+                      </div>
+                    </div>
+                    <div>
+                        Major in Transdisciplinary Studies (Track | Computer Science)
+                    </div>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody></table>
+
+          <!-- Academic service -->
+          <!-- <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
+            <tr>
+              <td>
+                <h2>Academic Services</h2>
+                <ul>
+                  <li>
+                    Conference Reviewer: CVPR (2024)
+                  </li>
+                  <li>
+                      Journal Reviewer: TVCJ (2022)
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody></table> -->
+
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
+            <tr>
+              <td>
+                <h2>Invited Talks</h2>
+                <ul>
+                  <li>
+                    HDR-Plenoxels: High Dynamic Range Radiance Fields, Google ExploreCSR Workshop on POSTECH, Korea, 2023
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody></table>
+
+          <!-- TA -->
+          <!-- <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
+            <tr>
+              <td>
+                <h2>Teaching Experiences</h2>
+                <ul>
+                  <li>
+                    <div style="display: flex; justify-content: space-between;">
+                      <div style="text-align: right;">
+                          <b>NAVER Boostcamp AI Tech 4th, 5th, 6th, and 7th - NAVER & Upstage</b>
+                      </div>
+                      <div style="text-align: left;">
+                          2022 - Present
+                      </div>
+                    </div>
+                  <br>
+                  </li>
+                  <li>
+                    <div style="display: flex; justify-content: space-between;">
+                      <div style="text-align: right;">
+                          <b>[EECE695] Human-centric Social AI System Design, POSTECH</b>
+                      </div>
+                      <div style="text-align: left;">
+                          Sep 2022 - Nov 2022
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody></table> -->
+
+
+          <table width="100%" align="center" border="0" cellpadding="20"><tbody>            
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:0px">
+                <br>
+                <p style="text-align:right;font-size:small;">
+                  Template adapted from <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron's website</a>.
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
