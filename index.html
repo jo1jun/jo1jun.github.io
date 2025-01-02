@@ -89,6 +89,47 @@
       </td>
     </tr>
 
+
+    <tr onmouseout="sscd_stop()" onmouseover="sscd_start()">
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='sscd'>
+          <img src='images/coming-soon.png' width=100%>
+        </div>
+        <script type="text/javascript">
+          function sscd_start() {
+            document.getElementById('remedy_image').style.opacity = "1";
+          }
+
+          function sscd_stop() {
+            document.getElementById('remedy_image').style.opacity = "0";
+          }
+          sscd_stop()
+        </script>
+      </td>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+<!--        <a href="https://sr-i2l.github.io/">-->
+          <span class="papertitle">Self-Supervised Collaborative Distillation for Autonomous Driving</span>
+        </a>
+        <br>
+        <strong><u>Wonjun Jo</u></strong>,
+        Hyunwoo Ha,
+        Kim Ji-Yeon,
+        Hawook Jeong,
+        Tae-Hyun Oh
+          <br>
+        <em>Under-review at CVPR</em>, 2025
+        <br>
+<!--        <a href="https://sr-i2l.github.io/">Project Page</a>-->
+<!--        /-->
+<!--        <a href="https://openaccess.thecvf.com/content/ACCV2024/html/Jo_The_Devil_is_in_the_Details_Simple_Remedies_for__ACCV_2024_paper.html">Paper</a>-->
+        <p></p>
+        <p>
+          Improving self-supervised 2D representation learning.
+        </p>
+      </td>
+    </tr>
+
     <tr onmouseout="remedy_stop()" onmouseover="remedy_start()">
       <td style="padding:20px;width:25%;vertical-align:middle">
         <div class="one">
@@ -125,7 +166,7 @@
         <a href="https://openaccess.thecvf.com/content/ACCV2024/html/Jo_The_Devil_is_in_the_Details_Simple_Remedies_for__ACCV_2024_paper.html">Paper</a>
         <p></p>
         <p>
-          Self-supervised 3D representation learning with 2D representation.
+          Proposing simple remedies for self-supervised 3D representation learning with 2D representation.
         </p>
       </td>
     </tr>
