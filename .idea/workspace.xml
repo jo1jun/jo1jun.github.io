@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="044a4f26-dbaa-46e7-bb11-d50b3c69acd3" name="Changes" comment="commit">
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/darkeqa.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +62,7 @@
       <workItem from="1759069592612" duration="8339000" />
       <workItem from="1759107400456" duration="610000" />
       <workItem from="1760609169328" duration="47000" />
-      <workItem from="1767577703596" duration="620000" />
+      <workItem from="1767577703596" duration="923000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1733904383174</created>
@@ -372,7 +372,14 @@
       <option name="project" value="LOCAL" />
       <updated>1767578285939</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="commit">
+      <created>1767578330063</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1767578330063</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
