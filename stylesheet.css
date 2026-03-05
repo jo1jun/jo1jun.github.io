@@ -352,6 +352,7 @@ h2 {
   object-position: center;
   display: block;
   background: #ffffff;
+  cursor: zoom-in;
 }
 
 .fade {
