@@ -84,6 +84,31 @@ a {
   font-size: 14px;
 }
 
+body {
+  margin: 0;
+  padding: 28px 16px 40px;
+  background-image:
+    linear-gradient(to bottom, rgba(247, 249, 252, 0.26) 0%, rgba(247, 249, 252, 0.88) 240px, #f7f9fc 520px),
+    url('images/personal-hero.jpg');
+  background-repeat: no-repeat, no-repeat;
+  background-position: top center, top center;
+  background-size: 100% 520px, cover;
+  background-color: #f7f9fc;
+}
+
+.page-shell {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(18, 39, 58, 0.08);
+  box-shadow: 0 14px 38px rgba(17, 34, 51, 0.1);
+}
+
+@media (max-width: 700px) {
+  body {
+    padding: 16px 10px 24px;
+    background-size: 100% 360px, cover;
+  }
+}
+
 strong {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 14px;
