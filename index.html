@@ -288,8 +288,25 @@ Self-Supervised Collaborative Distillation: Enhancing Lighting Robustness and 3D
             <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
               <tr>
                 <td style="padding:20px;width:100%;vertical-align:middle">
-                  <div class="tab-card">
-                    <p><strong>Academic Gallery (Coming soon).</strong> Conference presentations, workshops, posters, and lab activities will be shared here.</p>
+                  <div class="subtabs" role="tablist" aria-label="Academic events">
+                    <button id="photo-subtab-btn-icvss" class="subtab-btn is-active" type="button" role="tab" aria-selected="true" aria-controls="photo-subtab-icvss" data-subtab-target="photo-subtab-icvss">ICVSS 2025</button>
+                    <button id="photo-subtab-btn-iccv" class="subtab-btn" type="button" role="tab" aria-selected="false" aria-controls="photo-subtab-iccv" data-subtab-target="photo-subtab-iccv">ICCV 2026</button>
+                  </div>
+
+                  <div id="photo-subtab-icvss" class="subtab-panel is-active" role="tabpanel" aria-labelledby="photo-subtab-btn-icvss">
+                    <div class="tab-card">
+                      <p><strong>ICVSS 2025</strong></p>
+                      <p>Month: July 2025</p>
+                      <p><a href="https://icvss.dmi.unict.it/icvss2025/" target="_blank" rel="noopener noreferrer">Official ICVSS 2025 Page</a></p>
+                    </div>
+                  </div>
+
+                  <div id="photo-subtab-iccv" class="subtab-panel" role="tabpanel" aria-labelledby="photo-subtab-btn-iccv">
+                    <div class="tab-card">
+                      <p><strong>ICCV 2026</strong></p>
+                      <p>Month: TBD</p>
+                      <p><a href="https://iccv.thecvf.com/" target="_blank" rel="noopener noreferrer">Official ICCV Portal (CVF)</a></p>
+                    </div>
                   </div>
                 </td>
               </tr>
@@ -319,6 +336,24 @@ Self-Supervised Collaborative Distillation: Enhancing Lighting Robustness and 3D
 
         buttons.forEach((button) => {
           button.addEventListener('click', () => activateTab(button.dataset.tabTarget));
+        });
+
+        const subtabButtons = document.querySelectorAll('.subtab-btn');
+        const subtabPanels = document.querySelectorAll('.subtab-panel');
+
+        function activateSubtab(targetId) {
+          subtabButtons.forEach((button) => {
+            const active = button.dataset.subtabTarget === targetId;
+            button.classList.toggle('is-active', active);
+            button.setAttribute('aria-selected', active ? 'true' : 'false');
+          });
+          subtabPanels.forEach((panel) => {
+            panel.classList.toggle('is-active', panel.id === targetId);
+          });
+        }
+
+        subtabButtons.forEach((button) => {
+          button.addEventListener('click', () => activateSubtab(button.dataset.subtabTarget));
         });
       })();
     </script>
