@@ -35,7 +35,7 @@
                 <p>
                     I am passionate about developing <strong>Embodied AI</strong> agents for real-world applications.<br>
                     I believe that the <strong>efficient use of human labels</strong> and the <strong>integration of information from multiple modalities</strong> are essential for achieving this goal.<br>
-                    Consequently, my main areas of interest include <strong>Self-supervised Learning</strong>, <strong>Multi-modal Learning</strong>, <strong>World Modeling</strong> for <strong>Embodied AI</strong>.<br>
+                    Consequently, my main areas of interest include <strong>Self-supervised Learning</strong>, <strong>Multi-modal Learning</strong>, <strong>World Models</strong> for <strong>Embodied AI</strong>.<br>
                     I am also pursuing theoretical inquiries from an <strong>information-theoretic perspective</strong> that unify these studies, in order to explore the <strong>emergence of intelligence</strong>.
                 </p>
                 <p>
@@ -367,8 +367,28 @@ Self-Supervised Collaborative Distillation: Enhancing Lighting Robustness and 3D
       (function() {
         const buttons = document.querySelectorAll('.tab-btn');
         const panels = document.querySelectorAll('.tab-panel');
+        const TAB_STORAGE_KEY = 'activeMainTab';
+        const PHOTO_SUBTAB_STORAGE_KEY = 'activePhotoSubtab';
+        const validTabIds = Array.from(panels).map((panel) => panel.id);
 
-        function activateTab(targetId) {
+        function readStorage(key) {
+          try {
+            return window.localStorage.getItem(key);
+          } catch (e) {
+            return null;
+          }
+        }
+
+        function writeStorage(key, value) {
+          try {
+            window.localStorage.setItem(key, value);
+          } catch (e) {
+            // no-op
+          }
+        }
+
+        function activateTab(targetId, options) {
+          const opts = options || {};
           buttons.forEach((button) => {
             const active = button.dataset.tabTarget === targetId;
             button.classList.toggle('is-active', active);
@@ -377,16 +397,24 @@ Self-Supervised Collaborative Distillation: Enhancing Lighting Robustness and 3D
           panels.forEach((panel) => {
             panel.classList.toggle('is-active', panel.id === targetId);
           });
+          if (opts.save !== false) {
+            writeStorage(TAB_STORAGE_KEY, targetId);
+          }
+          if (opts.updateHash !== false) {
+            history.replaceState(null, '', '#' + targetId);
+          }
         }
 
         buttons.forEach((button) => {
-          button.addEventListener('click', () => activateTab(button.dataset.tabTarget));
+          button.addEventListener('click', () => activateTab(button.dataset.tabTarget, { save: true, updateHash: true }));
         });
 
         const subtabButtons = document.querySelectorAll('.subtab-btn');
         const subtabPanels = document.querySelectorAll('.subtab-panel');
+        const validPhotoSubtabIds = Array.from(subtabPanels).map((panel) => panel.id);
 
-        function activateSubtab(targetId) {
+        function activateSubtab(targetId, options) {
+          const opts = options || {};
           subtabButtons.forEach((button) => {
             const active = button.dataset.subtabTarget === targetId;
             button.classList.toggle('is-active', active);
@@ -395,10 +423,13 @@ Self-Supervised Collaborative Distillation: Enhancing Lighting Robustness and 3D
           subtabPanels.forEach((panel) => {
             panel.classList.toggle('is-active', panel.id === targetId);
           });
+          if (opts.save !== false) {
+            writeStorage(PHOTO_SUBTAB_STORAGE_KEY, targetId);
+          }
         }
 
         subtabButtons.forEach((button) => {
-          button.addEventListener('click', () => activateSubtab(button.dataset.subtabTarget));
+          button.addEventListener('click', () => activateSubtab(button.dataset.subtabTarget, { save: true }));
         });
 
         const musicItems = document.querySelectorAll('.music-item');
@@ -412,6 +443,19 @@ Self-Supervised Collaborative Distillation: Enhancing Lighting Robustness and 3D
             musicPlayer.src = 'https://www.youtube.com/embed?listType=search&list=' + encodeURIComponent(query);
           });
         });
+
+        const hashTabId = window.location.hash ? window.location.hash.slice(1) : '';
+        const storedTabId = readStorage(TAB_STORAGE_KEY);
+        const initialTabId = validTabIds.includes(hashTabId)
+          ? hashTabId
+          : (validTabIds.includes(storedTabId) ? storedTabId : 'tab-research');
+        activateTab(initialTabId, { save: false, updateHash: false });
+
+        const storedPhotoSubtabId = readStorage(PHOTO_SUBTAB_STORAGE_KEY);
+        const initialPhotoSubtabId = validPhotoSubtabIds.includes(storedPhotoSubtabId)
+          ? storedPhotoSubtabId
+          : 'photo-subtab-accv';
+        activateSubtab(initialPhotoSubtabId, { save: false });
       })();
     </script>
   </body>
