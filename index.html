@@ -67,6 +67,46 @@
       <td style="padding:20px;width:25%;vertical-align:middle">
         <div class="one">
           <div class="two" id='sscd'>
+          <img src='images/coming-soon.png' width=100%>
+        </div>
+        <script type="text/javascript">
+          function sscd_start() {
+            document.getElementById('sscd_image').style.opacity = "1";
+          }
+
+          function sscd_stop() {
+            document.getElementById('sscd_image').style.opacity = "0";
+          }
+          sscd_stop()
+        </script>
+      </td>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+<!--        <a href="https://sr-i2l.github.io/">-->
+          <span class="papertitle">LiDAR-Anchored Collaborative Distillation for Robust 2D Representations</span>
+        </a>
+        <br>
+        <strong><u>Wonjun Jo</u></strong>,
+        Hyunwoo Ha,
+        Kim Ji-Yeon,
+        Hawook Jeong,
+        Tae-Hyun Oh
+          <br>
+        <em>arXiv archived / Under-review at RA-L</em>
+        <br>
+        <a href="https://la-cd.github.io/">Project Page</a>
+          /
+          <a href="https://arxiv.org/abs/2602.12524">arXiv</a>
+        <p></p>
+        <p>
+          Improving robustness of self-supervised 2D representation learning.
+        </p>
+      </td>
+    </tr>
+
+     <tr onmouseout="sscd_stop()" onmouseover="sscd_start()">
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='sscd'>
           <img src='images/darkeqa.png' width=100%>
         </div>
         <script type="text/javascript">
@@ -98,49 +138,6 @@
         <p></p>
         <p>
           Benchmarking the robustness of Vision-Language Models in low-light environments.
-        </p>
-      </td>
-    </tr>
-
-     <tr onmouseout="sscd_stop()" onmouseover="sscd_start()">
-      <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='sscd'>
-          <img src='images/coming-soon.png' width=100%>
-        </div>
-        <script type="text/javascript">
-          function sscd_start() {
-            document.getElementById('sscd_image').style.opacity = "1";
-          }
-
-          function sscd_stop() {
-            document.getElementById('sscd_image').style.opacity = "0";
-          }
-          sscd_stop()
-        </script>
-      </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-<!--        <a href="https://sr-i2l.github.io/">-->
-          <span class="papertitle">LiDAR-Anchored Collaborative Distillation for Robust 2D Representations</span>
-        </a>
-        <br>
-        <strong><u>Wonjun Jo</u></strong>,
-        Hyunwoo Ha,
-        Kim Ji-Yeon,
-        Hawook Jeong,
-        Tae-Hyun Oh
-          <br>
-        <em>Under-review at ICLR</em>, 2026
-        <br>
-<!--        <a href="https://sr-i2l.github.io/">Project Page</a>-->
-<!--        /-->
-<!--        <a href="https://openaccess.thecvf.com/content/ACCV2024/html/Jo_The_Devil_is_in_the_Details_Simple_Remedies_for__ACCV_2024_paper.html">Paper</a>-->
-          Project Page
-          /
-          Paper
-        <p></p>
-        <p>
-          Improving robustness of self-supervised 2D representation learning.
         </p>
       </td>
     </tr>
