@@ -201,14 +201,14 @@ h2 {
 }
 
 .one {
-  width: 160px;
-  height: 160px;
+  width: 220px;
+  height: 165px;
   position: relative;
 }
 
 .two {
-  width: 160px;
-  height: 160px;
+  width: 220px;
+  height: 165px;
   position: absolute;
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
@@ -230,4 +230,12 @@ span.highlight {
     padding: 20px;
     display: inline-block;
     border-radius: 10px;
+}
+
+@media (max-width: 700px) {
+  .one,
+  .two {
+    width: 140px;
+    height: 105px;
+  }
 }
