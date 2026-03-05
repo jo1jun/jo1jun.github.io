@@ -250,6 +250,12 @@ body {
   max-width: 100%;
 }
 
+.music-embed {
+  display: block;
+  width: 100%;
+  min-height: 250px;
+}
+
 @media (max-width: 700px) {
   body {
     padding: 0 10px 24px;
@@ -275,6 +281,10 @@ body {
 
   .music-layout {
     grid-template-columns: 1fr;
+  }
+
+  .music-embed {
+    min-height: 210px;
   }
 }
 
