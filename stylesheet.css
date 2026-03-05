@@ -106,20 +106,20 @@ body {
   position: relative;
   height: clamp(430px, 46vw, 560px);
   background: url('images/personal-hero.jpg') center top / cover no-repeat;
+  overflow: hidden;
 }
 
 .top-hero::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: calc(100% + 160px);
+  inset: 0;
   pointer-events: none;
   background: linear-gradient(
     to bottom,
-    rgba(247, 249, 252, 0.02) 38%,
-    rgba(247, 249, 252, 0.66) 76%,
+    rgba(247, 249, 252, 0.00) 24%,
+    rgba(247, 249, 252, 0.24) 52%,
+    rgba(247, 249, 252, 0.58) 72%,
+    rgba(247, 249, 252, 0.86) 88%,
     #f7f9fc 100%
   );
 }
