@@ -71,7 +71,7 @@
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-               <tr onmouseout="sscd_stop()" onmouseover="sscd_start()">
+               <tr id="research-lacd" onmouseout="sscd_stop()" onmouseover="sscd_start()">
       <td style="padding:20px;width:34%;vertical-align:middle">
         <div class="one">
           <div class="two" id='sscd'>
@@ -111,7 +111,7 @@
       </td>
     </tr>
 
-     <tr onmouseout="sscd_stop()" onmouseover="sscd_start()">
+     <tr id="research-darkeqa" onmouseout="sscd_stop()" onmouseover="sscd_start()">
       <td style="padding:20px;width:34%;vertical-align:middle">
         <div class="one">
           <div class="two" id='sscd'>
@@ -150,7 +150,7 @@
       </td>
     </tr>
 
-          <tr onmouseout="cd_v1_stop()" onmouseover="cd_v1_start()">
+          <tr id="research-iccvw" onmouseout="cd_v1_stop()" onmouseover="cd_v1_start()">
       <td style="padding:20px;width:34%;vertical-align:middle">
         <div class="one">
           <div class="two" id='cd_v1'>
@@ -194,7 +194,7 @@ Self-Supervised Collaborative Distillation: Enhancing Lighting Robustness and 3D
       </td>
     </tr>
 
-    <tr onmouseout="remedy_stop()" onmouseover="remedy_start()">
+    <tr id="research-accv" onmouseout="remedy_stop()" onmouseover="remedy_start()">
       <td style="padding:20px;width:34%;vertical-align:middle">
         <div class="one">
           <div class="two" id='remedy'>
@@ -291,6 +291,7 @@ Self-Supervised Collaborative Distillation: Enhancing Lighting Robustness and 3D
                   <div class="subtabs" role="tablist" aria-label="Academic events">
                     <button id="photo-subtab-btn-icvss" class="subtab-btn is-active" type="button" role="tab" aria-selected="true" aria-controls="photo-subtab-icvss" data-subtab-target="photo-subtab-icvss">ICVSS 2025</button>
                     <button id="photo-subtab-btn-iccv" class="subtab-btn" type="button" role="tab" aria-selected="false" aria-controls="photo-subtab-iccv" data-subtab-target="photo-subtab-iccv">ICCV 2026</button>
+                    <button id="photo-subtab-btn-accv" class="subtab-btn" type="button" role="tab" aria-selected="false" aria-controls="photo-subtab-accv" data-subtab-target="photo-subtab-accv">ACCV 2024</button>
                   </div>
 
                   <div id="photo-subtab-icvss" class="subtab-panel is-active" role="tabpanel" aria-labelledby="photo-subtab-btn-icvss">
@@ -298,14 +299,26 @@ Self-Supervised Collaborative Distillation: Enhancing Lighting Robustness and 3D
                       <p><strong>ICVSS 2025</strong></p>
                       <p>Month: July 2025</p>
                       <p><a href="https://icvss.dmi.unict.it/icvss2025/" target="_blank" rel="noopener noreferrer">Official ICVSS 2025 Page</a></p>
+                      <p><a href="#research-iccvw" data-target-tab="tab-research">Presented Paper in Research Tab (ICCV Workshop)</a></p>
                     </div>
                   </div>
 
                   <div id="photo-subtab-iccv" class="subtab-panel" role="tabpanel" aria-labelledby="photo-subtab-btn-iccv">
                     <div class="tab-card">
                       <p><strong>ICCV 2026</strong></p>
-                      <p>Month: TBD</p>
+                      <p>Month: October 2026</p>
                       <p><a href="https://iccv.thecvf.com/" target="_blank" rel="noopener noreferrer">Official ICCV Portal (CVF)</a></p>
+                      <p><a href="#research-iccvw" data-target-tab="tab-research">Presented Paper in Research Tab (ICCV Workshop)</a></p>
+                    </div>
+                  </div>
+
+                  <div id="photo-subtab-accv" class="subtab-panel" role="tabpanel" aria-labelledby="photo-subtab-btn-accv">
+                    <div class="tab-card">
+                      <p><strong>ACCV 2024</strong></p>
+                      <p>Month: December 2024</p>
+                      <p><a href="https://accv2024.org/" target="_blank" rel="noopener noreferrer">Official ACCV 2024 Page</a></p>
+                      <p><a href="#research-accv" data-target-tab="tab-research">Presented Paper in Research Tab (ACCV)</a></p>
+                      <p><a href="https://openaccess.thecvf.com/content/ACCV2024/html/Jo_The_Devil_is_in_the_Details_Simple_Remedies_for__ACCV_2024_paper.html" target="_blank" rel="noopener noreferrer">Paper (OpenAccess)</a></p>
                     </div>
                   </div>
                 </td>
@@ -354,6 +367,16 @@ Self-Supervised Collaborative Distillation: Enhancing Lighting Robustness and 3D
 
         subtabButtons.forEach((button) => {
           button.addEventListener('click', () => activateSubtab(button.dataset.subtabTarget));
+        });
+
+        const crossTabLinks = document.querySelectorAll('a[data-target-tab]');
+        crossTabLinks.forEach((link) => {
+          link.addEventListener('click', () => {
+            const targetTab = link.dataset.targetTab;
+            if (targetTab) {
+              activateTab(targetTab);
+            }
+          });
         });
       })();
     </script>
