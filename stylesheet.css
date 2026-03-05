@@ -96,6 +96,10 @@ a {
   font-size: 14px;
 }
 
+p {
+  line-height: 1.55;
+}
+
 body {
   margin: 0;
   padding: 0 16px 40px;
@@ -158,6 +162,24 @@ body {
   background: #1d3954;
   color: #ffffff;
   border-color: #1d3954;
+}
+
+.interest-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin: 10px 0 4px;
+}
+
+.interest-chip {
+  padding: 4px 10px;
+  border: 1px solid rgba(25, 49, 72, 0.2);
+  border-radius: 999px;
+  color: #224663;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 12px;
+  line-height: 1.2;
 }
 
 .tab-panel {
@@ -288,6 +310,10 @@ body {
     gap: 8px;
   }
 
+  .interest-chips {
+    gap: 6px;
+  }
+
   .mindmap-branches {
     grid-template-columns: 1fr;
   }
@@ -324,6 +350,15 @@ h2 {
   margin: 0;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 32px;
+  text-align: center;
+}
+
+.profile-photo {
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  display: block;
 }
 
 .one {
