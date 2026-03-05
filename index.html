@@ -243,8 +243,14 @@ Self-Supervised Collaborative Distillation: Enhancing Lighting Robustness and 3D
             <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
               <tr>
                 <td style="padding:20px;width:100%;vertical-align:middle">
-                  <div class="tab-card">
-                    <p><strong>Coming soon.</strong> Notes will be added later.</p>
+                  <div class="tab-card mindmap-card">
+                    <div class="mindmap-root">Research Core</div>
+                    <div class="mindmap-branches">
+                      <div class="mindmap-node">Self-Supervised Learning</div>
+                      <div class="mindmap-node">Multi-Modal Learning</div>
+                      <div class="mindmap-node">World Models</div>
+                      <div class="mindmap-node">Embodied AI</div>
+                    </div>
                   </div>
                 </td>
               </tr>
@@ -263,12 +269,41 @@ Self-Supervised Collaborative Distillation: Enhancing Lighting Robustness and 3D
               <tr>
                 <td style="padding:20px;width:100%;vertical-align:middle">
                   <div class="tab-card">
-                    <p><strong>No Time for Caution</strong> - Hans Zimmer</p>
-                    <p><strong>Can You Hear The Music</strong> - Ludwig Goransson</p>
-                    <p><strong>Time</strong> - Hans Zimmer</p>
-                    <p><strong>We Have to Go</strong> - Steve Jablonsky</p>
-                    <p><strong>Cloud Atlas End Title</strong> - Tom Tykwer, MDR Rundfunkchor, MDR Sinfonieorchester</p>
-                    <p><strong>Tears in the Rain</strong> - Hans Zimmer, Benjamin Wallfisch</p>
+                    <div class="music-layout">
+                      <div class="music-list">
+                        <button class="music-item is-active" type="button" data-youtube-query="No Time for Caution Hans Zimmer">
+                          No Time for Caution - Hans Zimmer
+                        </button>
+                        <button class="music-item" type="button" data-youtube-query="Can You Hear The Music Ludwig Goransson">
+                          Can You Hear The Music - Ludwig Goransson
+                        </button>
+                        <button class="music-item" type="button" data-youtube-query="Time Hans Zimmer Inception">
+                          Time - Hans Zimmer
+                        </button>
+                        <button class="music-item" type="button" data-youtube-query="We Have to Go Steve Jablonsky Transformers The Last Knight">
+                          We Have to Go - Steve Jablonsky
+                        </button>
+                        <button class="music-item" type="button" data-youtube-query="Cloud Atlas End Title Tom Tykwer">
+                          Cloud Atlas End Title - Tom Tykwer, MDR Rundfunkchor, MDR Sinfonieorchester
+                        </button>
+                        <button class="music-item" type="button" data-youtube-query="Tears in the Rain Hans Zimmer Benjamin Wallfisch">
+                          Tears in the Rain - Hans Zimmer, Benjamin Wallfisch
+                        </button>
+                      </div>
+                      <div class="music-player-wrap">
+                        <iframe
+                          id="music-player"
+                          width="100%"
+                          height="315"
+                          src="https://www.youtube.com/embed?listType=search&list=No%20Time%20for%20Caution%20Hans%20Zimmer"
+                          title="YouTube music player"
+                          frameborder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          referrerpolicy="strict-origin-when-cross-origin"
+                          allowfullscreen>
+                        </iframe>
+                      </div>
+                    </div>
                   </div>
                 </td>
               </tr>
@@ -297,7 +332,6 @@ Self-Supervised Collaborative Distillation: Enhancing Lighting Robustness and 3D
                       <p><strong>ACCV 2024</strong></p>
                       <p>Date: December 2024</p>
                       <p><a href="https://accv2024.org/" target="_blank" rel="noopener noreferrer">Official ACCV 2024 Page</a></p>
-                      <p><a href="#research-accv" data-target-tab="tab-research">Presented Paper in Research Tab (ACCV)</a></p>
                       <p><a href="https://openaccess.thecvf.com/content/ACCV2024/html/Jo_The_Devil_is_in_the_Details_Simple_Remedies_for__ACCV_2024_paper.html" target="_blank" rel="noopener noreferrer">Paper (OpenAccess)</a></p>
                     </div>
                   </div>
@@ -307,7 +341,6 @@ Self-Supervised Collaborative Distillation: Enhancing Lighting Robustness and 3D
                       <p><strong>ICVSS 2025</strong></p>
                       <p>Date: July 2025</p>
                       <p><a href="https://icvss.dmi.unict.it/icvss2025/" target="_blank" rel="noopener noreferrer">Official ICVSS 2025 Page</a></p>
-                      <p><a href="#research-iccvw" data-target-tab="tab-research">Presented Paper in Research Tab (ICCV Workshop)</a></p>
                       <p><a href="https://openreview.net/pdf?id=i1JDHqVzmv" target="_blank" rel="noopener noreferrer">Paper (OpenReview)</a></p>
                     </div>
                   </div>
@@ -317,7 +350,6 @@ Self-Supervised Collaborative Distillation: Enhancing Lighting Robustness and 3D
                       <p><strong>ICCV 2026</strong></p>
                       <p>Date: October 2026</p>
                       <p><a href="https://iccv.thecvf.com/" target="_blank" rel="noopener noreferrer">Official ICCV Portal (CVF)</a></p>
-                      <p><a href="#research-iccvw" data-target-tab="tab-research">Presented Paper in Research Tab (ICCV Workshop)</a></p>
                       <p><a href="https://openreview.net/pdf?id=i1JDHqVzmv" target="_blank" rel="noopener noreferrer">Paper (OpenReview)</a></p>
                     </div>
                   </div>
@@ -369,13 +401,15 @@ Self-Supervised Collaborative Distillation: Enhancing Lighting Robustness and 3D
           button.addEventListener('click', () => activateSubtab(button.dataset.subtabTarget));
         });
 
-        const crossTabLinks = document.querySelectorAll('a[data-target-tab]');
-        crossTabLinks.forEach((link) => {
-          link.addEventListener('click', () => {
-            const targetTab = link.dataset.targetTab;
-            if (targetTab) {
-              activateTab(targetTab);
-            }
+        const musicItems = document.querySelectorAll('.music-item');
+        const musicPlayer = document.getElementById('music-player');
+        musicItems.forEach((item) => {
+          item.addEventListener('click', () => {
+            const query = item.dataset.youtubeQuery;
+            if (!query || !musicPlayer) return;
+            musicItems.forEach((node) => node.classList.remove('is-active'));
+            item.classList.add('is-active');
+            musicPlayer.src = 'https://www.youtube.com/embed?listType=search&list=' + encodeURIComponent(query);
           });
         });
       })();
