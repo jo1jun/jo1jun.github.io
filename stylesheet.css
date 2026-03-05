@@ -256,6 +256,14 @@ body {
   min-height: 250px;
 }
 
+.item-table tr td {
+  border-bottom: 1px solid rgba(20, 40, 60, 0.08);
+}
+
+.item-table tr:last-child td {
+  border-bottom: 0;
+}
+
 @media (max-width: 700px) {
   body {
     padding: 0 10px 24px;
