@@ -54,8 +54,14 @@
               </td>
             </tr>
           </tbody></table>
-          
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <div class="section-tabs" role="tablist" aria-label="Site sections">
+            <button id="tab-btn-research" class="tab-btn is-active" type="button" role="tab" aria-selected="true" aria-controls="tab-research" data-tab-target="tab-research">Research</button>
+            <button id="tab-btn-music" class="tab-btn" type="button" role="tab" aria-selected="false" aria-controls="tab-music" data-tab-target="tab-music">Music</button>
+            <button id="tab-btn-photo" class="tab-btn" type="button" role="tab" aria-selected="false" aria-controls="tab-photo" data-tab-target="tab-photo">Photo</button>
+          </div>
+
+          <div id="tab-research" class="tab-panel is-active" role="tabpanel" aria-labelledby="tab-btn-research">
+            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
               <tr>
               <td style="padding:20px;width:100%;vertical-align:middle">
                 <h2>Research</h2>
@@ -228,29 +234,71 @@ Self-Supervised Collaborative Distillation: Enhancing Lighting Robustness and 3D
     </tr>
 
           </tbody></table>
+          </div>
 
-          <style>
-            .list-container {
-                display: flex;
-                justify-content: space-between;
-                list-style: none;
-                padding: 0;
-            }
-            .list-container li {
-                width: 50%;
-            }
-            .left-list {
-                text-align: left;
-            }
-            .right-list {
-                text-align: right;
-            }
-        </style>
-          
+          <div id="tab-music" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-music">
+            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+              <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <h2>Music</h2>
+                </td>
+              </tr>
+            </tbody></table>
+            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+              <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <div class="tab-card">
+                    <p><strong>Coming soon.</strong> Favorite tracks, playlists, and live session notes will be published here.</p>
+                  </div>
+                </td>
+              </tr>
+            </tbody></table>
+          </div>
+
+          <div id="tab-photo" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-photo">
+            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+              <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <h2>Photo</h2>
+                </td>
+              </tr>
+            </tbody></table>
+            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+              <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <div class="tab-card">
+                    <p><strong>Coming soon.</strong> A personal gallery for travel and daily visual notes will appear here.</p>
+                  </div>
+                </td>
+              </tr>
+            </tbody></table>
+          </div>
+
           <table width="100%" align="center" border="0" cellpadding="20"><tbody>
           </tbody></table>
         </td>
       </tr>
     </table>
+    <script type="text/javascript">
+      (function() {
+        const buttons = document.querySelectorAll('.tab-btn');
+        const panels = document.querySelectorAll('.tab-panel');
+
+        function activateTab(targetId) {
+          buttons.forEach((button) => {
+            const active = button.dataset.tabTarget === targetId;
+            button.classList.toggle('is-active', active);
+            button.setAttribute('aria-selected', active ? 'true' : 'false');
+          });
+          panels.forEach((panel) => {
+            panel.classList.toggle('is-active', panel.id === targetId);
+          });
+        }
+
+        buttons.forEach((button) => {
+          button.addEventListener('click', () => activateTab(button.dataset.tabTarget));
+        });
+      })();
+    </script>
   </body>
 </html>
