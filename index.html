@@ -15,47 +15,56 @@
     <meta property="og:url" content="https://jo1jun.github.io/">
     <meta property="og:image" content="https://jo1jun.github.io/images/in_vancouver.jpeg">
     <link rel="shortcut icon" href="images/cosmic_cliff.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
 
   </head>
 
   <body>
-    <div class="top-hero" aria-hidden="true"></div>
-    <table class="page-shell" style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <header class="hero" aria-label="Hero">
+      <div class="hero-content">
+        <p class="hero-brand">Wonjun Jo</p>
+        <h1 class="hero-title">Embodied AI for real-world robotics</h1>
+        <p class="hero-subtitle">Ph.D. candidate at POSTECH, conducting research with the AMI Lab at KAIST.</p>
+        <p class="hero-ctas">
+          <a class="hero-cta-link" href="mailto:jo1jun@postech.ac.kr">Email</a>
+          <a class="hero-cta-link" href="https://www.overleaf.com/read/xbxsvjwyvtdm#5d4c94">CV</a>
+          <a class="hero-cta-link" href="https://scholar.google.com/citations?hl=en&user=-WfW-fUAAAAJ">Scholar</a>
+        </p>
+      </div>
+    </header>
+    <table class="page-shell" style="width:100%;max-width:940px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
       <tr style="padding:0px">
         <td style="padding:0px">
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr style="padding:0px">
-              <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <p class="name">Wonjun Jo</p>
-                <p>I am a Ph.D. candidate in the Department of Electrical Engineering at POSTECH. I conduct my research at the <a href="https://ami.kaist.ac.kr/">Advanced Machine Intelligence (AMI) Lab</a> at KAIST, advised by Prof. <a href="https://ami.kaist.ac.kr/members/tae-hyun-oh">Tae-Hyun Oh</a>.
-                </p>
-                <p>
-                    I am passionate about researching <strong>Embodied AI</strong> for real-world robotics.<br>
-                    My work focuses on label-efficient learning and multi-modal integration, with core interests in <strong>Self-supervised Learning</strong>, <strong>Multi-modal Learning</strong>, and <strong>World Models</strong>.<br>
-                    I also study these problems through an <strong>information-theoretic perspective</strong>.
-                </p>
-                <p>
-                    Recently, I am interested in <strong>world models for robotics using video data</strong> and <strong>active search</strong>, and also interested in <strong>tactile sensors</strong> for a more comprehensive understanding of the world.
-                </p>
-                <div class="interest-chips" aria-label="Research interests">
-                  <span class="interest-chip">Embodied AI</span>
-                  <span class="interest-chip">Self-supervised Learning</span>
-                  <span class="interest-chip">Multi-modal Learning</span>
-                  <span class="interest-chip">World Models</span>
-                </div>
-                <p style="text-align:center">
-                    <a href="mailto:jo1jun@postech.ac.kr">Email</a><span class="sep"> | </span>
-                    <a href="https://www.overleaf.com/read/xbxsvjwyvtdm#5d4c94">CV</a><span class="sep"> | </span>
-                    <a href="https://scholar.google.com/citations?hl=en&user=-WfW-fUAAAAJ">Scholar</a><span class="sep"> | </span>
-                    <a href="https://www.linkedin.com/in/wonjun-jo-a21582300">LinkedIn</a>
-                </p>
-              </td>
-              <td style="padding:2.5%;width:30%;max-width:30%">
-                <a href="images/in_vancouver.jpeg"><img alt="profile photo" src="images/in_vancouver.jpeg" class="profile-photo hoverZoomLink" loading="lazy"></a>
-              </td>
-            </tr>
-          </tbody></table>
+          <section class="about-section">
+            <div class="about-copy">
+              <h2 class="about-title">Research Focus</h2>
+              <p>
+                I am a Ph.D. candidate in the Department of Electrical Engineering at POSTECH. I conduct my research at the
+                <a href="https://ami.kaist.ac.kr/">Advanced Machine Intelligence (AMI) Lab</a> at KAIST, advised by Prof.
+                <a href="https://ami.kaist.ac.kr/members/tae-hyun-oh">Tae-Hyun Oh</a>.
+              </p>
+              <p>
+                My work focuses on label-efficient learning and multi-modal integration, especially <strong>Self-supervised Learning</strong>,
+                <strong>Multi-modal Learning</strong>, and <strong>World Models</strong> for embodied intelligence.
+              </p>
+              <p>
+                Recently, I have been studying <strong>world models from video data</strong>, <strong>active search</strong>, and
+                <strong>tactile sensing</strong> for more complete robot perception.
+              </p>
+              <p class="about-links">
+                <a href="mailto:jo1jun@postech.ac.kr">Email</a><span class="sep"> | </span>
+                <a href="https://www.overleaf.com/read/xbxsvjwyvtdm#5d4c94">CV</a><span class="sep"> | </span>
+                <a href="https://scholar.google.com/citations?hl=en&user=-WfW-fUAAAAJ">Scholar</a><span class="sep"> | </span>
+                <a href="https://www.linkedin.com/in/wonjun-jo-a21582300">LinkedIn</a>
+              </p>
+            </div>
+            <div class="about-media">
+              <a href="images/in_vancouver.jpeg"><img alt="profile photo" src="images/in_vancouver.jpeg" class="profile-photo hoverZoomLink" loading="lazy"></a>
+            </div>
+          </section>
           <div class="section-tabs" role="tablist" aria-label="Site sections">
             <button id="tab-btn-research" class="tab-btn is-active" type="button" role="tab" aria-selected="true" aria-controls="tab-research" data-tab-target="tab-research">Research</button>
             <button id="tab-btn-notes" class="tab-btn" type="button" role="tab" aria-selected="false" aria-controls="tab-notes" data-tab-target="tab-notes">Notes</button>
