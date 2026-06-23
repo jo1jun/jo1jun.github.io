@@ -1,0 +1,271 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{verbatim}
+\usepackage{xcolor}
+\ifdefined\pdfglyphtounicode
+\input{glyphtounicode}
+\fi
+\usepackage{hyperref}
+
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\ifdefined\pdfgentounicode
+\pdfgentounicode=1
+\fi
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Wonjun Jo} \\ \vspace{1mm}
+    {\small
+    \href{mailto:jo1jun@postech.ac.kr}{jo1jun@postech.ac.kr} \\ %$|$
+    \href{https://jo1jun.github.io/}{\underline{Website}} $|$
+    \href{https://scholar.google.com/citations?user=-WfW-fUAAAAJ&hl=ko}{\underline{Scholar}} $|$
+    \href{https://github.com/jo1jun}{\underline{Github}} $|$
+    \href{https://www.linkedin.com/in/wonjun-jo-a21582300/}{\underline{LinkedIn}}
+    }
+\end{center}
+
+%-----------RESEARCH INTERESTS-----------
+\section{Research Interests}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \item{\textbf{Self-Supervised and Multi-Modal Learning for World Models in Embodied AI:}}\vspace{-1.5mm}
+    \small{\item{Preserving and improving World Model generalization through self-supervised and multi-modal learning toward robust Embodied AI, with recent focus on VLA/WAM for robotics and sound/tactile signals for holistic world understanding.}}
+ \end{itemize}
+ 
+%-----------PUBLICATIONS-----------
+\newcommand{\refnumbering}[1]{\noindent[\arabic{#1}]\stepcounter{#1}~}
+\newcommand{\publicationSummary}[1]{\vspace{0.5mm}\begin{itemize}[leftmargin=0.34in, topsep=2pt, itemsep=0pt, parsep=0pt]\item \small{#1}\end{itemize}\vspace{0.5mm}}
+\newcounter{cntinter}\stepcounter{cntinter}
+\newcounter{cntdom}\stepcounter{cntdom}
+\section{Publications}
+
+\refnumbering{cntinter}\,
+{\textbf{\underline{Wonjun Jo}}, Nam Hyeon-Woo, Yohan Park, Hyunwoo Ha, Tae-Hyun Oh,
+``When Fine-Tuning Drifts: Mitigating Policy Drift with Base Action-Field Regularization,''}
+{\textcolor{gray}{\textit{Under-review}}}.	
+\publicationSummary{Mitigating policy drift for robust few-shot fine-tuning of pretrained robot policies.}
+    \vspace{2mm}
+
+\refnumbering{cntinter}\,
+{\textbf{\underline{Wonjun Jo}}, Hyunwoo Ha, Kim Ji-Yeon, Hawook Jeong, Tae-Hyun Oh,
+``LiDAR-Anchored Collaborative Distillation for Robust 2D Representations,''}
+{\textcolor{gray}{\textit{Under-review}}}.	
+\publicationSummary{Improving the robustness and generalization of self-supervised visual representations with LiDAR guidance.}
+    \vspace{2mm}
+
+\refnumbering{cntinter}\,
+{Yohan Park, Hyunwoo Ha, \textbf{\underline{Wonjun Jo}}, Tae-Hyun Oh,
+``DarkQA: Benchmarking Vision-Language Models on Visual-Primitive Question Answering in Low-Light Indoor Scenes,''}
+{\textit{IEEE Robotics and Automation Letters (RA-L)}, 2026}.
+\publicationSummary{Benchmarking the robustness of embodied vision-language models under low-light conditions.}
+    \vspace{2mm}
+
+\refnumbering{cntinter}\,
+{\textbf{\underline{Wonjun Jo}}, Hyunwoo Ha, Kim Ji-Yeon, Hawook Jeong, Tae-Hyun Oh,
+``Self-Supervised Collaborative Distillation: Enhancing Lighting Robustness and 3D Awareness,''}
+{Workshop on Wild3D, \textit{IEEE/CVF International Conference on Computer Vision (ICCV)}, 2025}.
+\publicationSummary{Improving pretrained visual representations for lighting robustness and 3D-aware generalization.}
+    \vspace{2mm}
+
+\refnumbering{cntinter}\,
+{\textbf{\underline{Wonjun Jo}}, Kwon Byung-Ki, Kim Ji-Yeon, Hawook Jeong, Kyungdon Joo, Tae-Hyun Oh,
+``The Devil is in the Details: Simple Remedies for Image-to-LiDAR Representation Learning,''}
+{\textit{Asian Conference on Computer Vision (ACCV)}, 2024}.
+\publicationSummary{Improving self-supervised image-to-LiDAR representation learning for robust 3D perception.}
+    \vspace{2mm}
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+    \resumeProjectHeading
+          {\textbf{Self-Supervised Learning Method Utilizing Camera-LiDAR Correlation} \\ \textbf{for Autonomous Driving}}{Jan. 2023 -- Dec. 2024}
+          \resumeItemListStart
+            \resumeItem{Proposed a novel self-supervised learning method for improving 2D representation using LiDAR.}
+            \resumeItem{Proposed remedies for improving self-supervised image-to-LiDAR distillation method.}
+            \resumeItem{Funded by the RideFlux Inc., South Korea.}
+    \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Deformable Object Recognition Technology Research}}{Mar. 2022 -- Dec. 2022}
+          \resumeItemListStart
+            \resumeItem{Developed deformable object recognition algorithm on multi-spectral images.}
+            \resumeItem{Developed motion vector estimation algorithm for deformable objects using LiDAR.}
+            \resumeItem{Funded by the Agency for Defense Development (ADD), South Korea.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------PATENTS-----------
+\section{Patents}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+    {\textbf{Self-Supervised Learning Method, Computing Device, and Computer Program} \\ \textbf{Using Synchronized Sensor Data and Unsynchronized Sensor Data}}{2023}
+    \resumeItemListStart
+      \resumeItem{Republic of Korea. 10-2023-0146900}
+    \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------Academic Services-----------
+\section{Academic Services}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+        {\textbf{Journal Reviewer}}{}
+          \resumeItemListStart
+            \resumeItem{The Visual Computer: International Journal of Computer Graphics (TVCJ), 2023}
+          \resumeItemListEnd
+        \resumeProjectHeading
+        {\textbf{Conference Reviewer}}{}
+          \resumeItemListStart
+            \resumeItem{Conference on Robot Learning (CoRL), 2026}
+            \resumeItem{International Conference on Robotics and Automation (ICRA), 2023}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+      \resumeSubheading
+      {POSTECH}{Pohang, South Korea}
+      {Joint M.S \& Ph.D. in Electrical Engineering (Advisor: Tae-Hyun Oh)}{Mar. 2022 -- \ \ \ \ \ \ \ \ \ \ \ \ \ }
+    \resumeSubheading
+      {Inha University}{Incheon, South Korea}
+      {B.S. in Computer Engineering}{Mar. 2018 -- Feb. 2022}
+  \resumeSubHeadingListEnd
+
+%-----------Experience-----------
+\section{Experience}
+  \resumeSubHeadingListStart    
+    \resumeSubheading
+      {KIST Physical AI Research Scientist Internship}{Seoul, South Korea}
+      {Korea Institute of Science and Technology (Advisor: \href{https://scholar.google.com/citations?user=XA8EOlEAAAAJ\&hl=en}{In So Kweon})}{Jul.~2026 -- Present}
+      \resumeItemListStart
+        \resumeItem{World models for physical robot AI agents.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {POSTECH Student Internship}{Pohang, South Korea}
+      {Pohang University of Science and Technology (Advisor: \href{https://ami.kaist.ac.kr/members/tae-hyun-oh}{Tae-Hyun Oh})}{Jun.~2021 -- Aug.~2021}
+      \resumeItemListStart
+        \resumeItem{Knowledge distillation for human mesh reconstruction.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+              
+%-----------EXTRA SECTION-----------
+\section{Extra}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Deep Learning Seminar}}{}
+          \resumeItemListStart
+            \resumeItem{POSTECH AMILab seminar \href{https://www.youtube.com/channel/UCAwBiEllpMRNGyGQ2hRVCIg}{[YouTube]}}
+            \resumeItem{POSTECH EE-group deep learning seminar}
+            \resumeItem{Attending POSTECH PAIR (CVLab, CGLab, MLLab, AMILab) seminar}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Teaching Experiences}}{}
+          \resumeItemListStart
+            \resumeItem{[EECE454] Introduction to Machine Learning, POSTECH}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
