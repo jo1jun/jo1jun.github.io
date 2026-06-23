@@ -390,6 +390,17 @@ h2 {
   cursor: zoom-in;
 }
 
+.experience-logo,
+.experience-logo .two {
+  max-width: 190px;
+  height: 120px;
+}
+
+.experience-logo-image {
+  box-sizing: border-box;
+  padding: 16px;
+}
+
 .fade {
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
@@ -412,5 +423,15 @@ span.highlight {
   .two {
     max-width: 150px;
     height: 110px;
+  }
+
+  .experience-logo,
+  .experience-logo .two {
+    max-width: 140px;
+    height: 92px;
+  }
+
+  .experience-logo-image {
+    padding: 12px;
   }
 }
