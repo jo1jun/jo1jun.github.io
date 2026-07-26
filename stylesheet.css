@@ -205,34 +205,8 @@ body {
   vertical-align: middle;
 }
 
-.review-placeholder {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  color: #2b557b;
-  text-align: center;
-  background:
-    linear-gradient(135deg, rgba(43, 85, 123, 0.08), rgba(43, 85, 123, 0.02)),
-    #ffffff;
-  border: 1px dashed rgba(43, 85, 123, 0.38);
-  cursor: default;
-}
-
-.review-placeholder strong {
-  font-size: 16px;
-}
-
-.review-placeholder span,
 .unavailable-link {
   color: #526577;
-}
-
-.review-placeholder span {
-  font-size: 12px;
 }
 
 .unavailable-link {
