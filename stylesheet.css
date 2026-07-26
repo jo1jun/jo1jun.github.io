@@ -205,6 +205,25 @@ body {
   vertical-align: middle;
 }
 
+.entry-table > tbody > .text-only-entry > td {
+  width: auto;
+}
+
+.submission-card {
+  padding: 18px 20px;
+  border-left: 4px solid #2b557b;
+  background: rgba(43, 85, 123, 0.06);
+}
+
+.author-role,
+.availability-note {
+  color: #526577;
+}
+
+.availability-note {
+  margin: 8px 0 0;
+}
+
 .section-tabs {
   display: flex;
   flex-wrap: wrap;
