@@ -1,0 +1,16 @@
+{
+  "name": "Wonjun Jo",
+  "short_name": "Wonjun Jo",
+  "description": "Research portfolio of Wonjun Jo, focused on Embodied AI, world models, and multimodal learning.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f9fc",
+  "theme_color": "#1d3954",
+  "icons": [
+    {
+      "src": "/images/favicon.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }
+  ]
+}
