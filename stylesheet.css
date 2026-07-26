@@ -205,23 +205,38 @@ body {
   vertical-align: middle;
 }
 
-.entry-table > tbody > .text-only-entry > td {
-  width: auto;
+.review-placeholder {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: #2b557b;
+  text-align: center;
+  background:
+    linear-gradient(135deg, rgba(43, 85, 123, 0.08), rgba(43, 85, 123, 0.02)),
+    #ffffff;
+  border: 1px dashed rgba(43, 85, 123, 0.38);
+  cursor: default;
 }
 
-.submission-card {
-  padding: 18px 20px;
-  border-left: 4px solid #2b557b;
-  background: rgba(43, 85, 123, 0.06);
+.review-placeholder strong {
+  font-size: 16px;
 }
 
-.author-role,
-.availability-note {
+.review-placeholder span,
+.unavailable-link {
   color: #526577;
 }
 
-.availability-note {
-  margin: 8px 0 0;
+.review-placeholder span {
+  font-size: 12px;
+}
+
+.unavailable-link {
+  cursor: default;
 }
 
 .section-tabs {
