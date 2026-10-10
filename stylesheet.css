@@ -627,6 +627,10 @@ h2 {
   text-align: center;
 }
 
+.coming-soon-image {
+  cursor: default;
+}
+
 .experience-logo,
 .experience-logo .two {
   max-width: 190px;
