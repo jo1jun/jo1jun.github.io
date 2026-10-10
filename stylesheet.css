@@ -631,6 +631,39 @@ h2 {
   cursor: default;
 }
 
+.one.animated-teaser {
+  height: auto;
+  text-align: right;
+}
+
+.animated-teaser .two {
+  position: relative;
+}
+
+.animated-teaser .two > a {
+  display: block;
+  height: 100%;
+}
+
+.teaser-toggle {
+  margin-top: 4px;
+  vertical-align: top;
+  min-height: 28px;
+  padding: 3px 9px;
+  border: 1px solid #c7d3de;
+  border-radius: 5px;
+  background: #fff;
+  color: #1d3954;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.teaser-toggle:focus-visible {
+  outline: 2px solid #2b557b;
+  outline-offset: 2px;
+}
+
 .experience-logo,
 .experience-logo .two {
   max-width: 190px;

@@ -29,7 +29,7 @@
     <link rel="icon" href="images/favicon.png" type="image/png" sizes="64x64">
     <link rel="manifest" href="site.webmanifest">
     <link rel="preload" href="images/personal-hero.webp" as="image" type="image/webp">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20261010-7">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20261010-8">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -181,12 +181,13 @@
 
                <tr id="research-lacd">
       <td>
-        <div class="one">
+        <div class="one animated-teaser">
           <div class="two">
-          <a href="images/lacd-teaser.webp" target="_blank" rel="noopener noreferrer">
-            <img src="images/lacd-teaser.webp" alt="Diagram of LiDAR-anchored collaborative distillation for robust 2D representations" class="teaser-image" loading="lazy">
+          <a href="images/lacd-teaser.gif" target="_blank" rel="noopener noreferrer">
+            <img id="lacd-teaser-image" src="images/lacd-teaser-static.png" data-animated-src="images/lacd-teaser.gif" data-static-src="images/lacd-teaser-static.png" alt="LiDAR-anchored collaborative distillation: initial features, Stage 1 image-to-LiDAR alignment, and Stage 2 LiDAR-to-image adaptation" class="teaser-image" width="568" height="524" loading="lazy">
           </a>
         </div>
+          <button class="teaser-toggle" type="button" aria-controls="lacd-teaser-image" aria-label="Play teaser animation" hidden>Play</button>
         </div>
       </td>
       <td>
@@ -601,6 +602,27 @@ Self-Supervised Collaborative Distillation: Enhancing Lighting Robustness and 3D
     </main>
     <script>
       (function() {
+        // Respect motion preferences and allow the repeating teaser to be stopped.
+        const teaserImage = document.getElementById('lacd-teaser-image');
+        const teaserToggle = document.querySelector('.teaser-toggle');
+        const teaserMotionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+        let teaserPlaying = false;
+
+        function setTeaserPlaying(playing) {
+          teaserPlaying = playing;
+          teaserImage.src = playing ? teaserImage.dataset.animatedSrc : teaserImage.dataset.staticSrc;
+          teaserImage.closest('a').href = teaserImage.src;
+          teaserToggle.textContent = playing ? 'Pause' : 'Play';
+          teaserToggle.setAttribute('aria-label', playing ? 'Pause teaser animation' : 'Play teaser animation');
+        }
+
+        teaserToggle.hidden = false;
+        setTeaserPlaying(!teaserMotionPreference.matches);
+        teaserToggle.addEventListener('click', () => setTeaserPlaying(!teaserPlaying));
+        teaserMotionPreference.addEventListener('change', event => {
+          if (event.matches) setTeaserPlaying(false);
+        });
+
         const profileFrame = document.querySelector('.profile-frame');
         const profileButton = document.querySelector('.profile-photo-button');
         const profileCaption = document.getElementById('profile-caption');
