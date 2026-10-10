@@ -571,6 +571,18 @@ h2 {
   cursor: zoom-in;
 }
 
+.teaser-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 20px;
+  border: 1px solid rgba(25, 49, 72, 0.12);
+  background: rgba(29, 57, 84, 0.03);
+  color: #526577;
+  text-align: center;
+}
+
 .experience-logo,
 .experience-logo .two {
   max-width: 190px;
