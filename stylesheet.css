@@ -432,7 +432,7 @@ body {
     padding: 18px 18px 0 !important;
   }
 
-  .intro-photo a {
+  .intro-photo .profile-frame {
     display: block;
     width: 140px;
     margin: 0 auto;
@@ -539,6 +539,42 @@ h2 {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 32px;
   text-align: center;
+}
+
+.profile-frame {
+  position: relative;
+  width: 100%;
+}
+
+.profile-photo-button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  line-height: 0;
+  cursor: pointer;
+}
+
+.profile-photo-button:focus-visible {
+  outline: 2px solid #2b557b;
+  outline-offset: 4px;
+}
+
+.profile-caption {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  left: 8px;
+  padding: 6px 8px;
+  border-radius: 999px;
+  background: rgba(17, 34, 51, 0.85);
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
+  pointer-events: none;
 }
 
 .profile-photo {

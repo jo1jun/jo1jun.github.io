@@ -29,7 +29,7 @@
     <link rel="icon" href="images/favicon.png" type="image/png" sizes="64x64">
     <link rel="manifest" href="site.webmanifest">
     <link rel="preload" href="images/personal-hero.webp" as="image" type="image/webp">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20261010-3">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20261010-4">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -96,7 +96,12 @@
                 </p>
               </td>
               <td class="intro-photo">
-                <a href="images/profile.webp"><img alt="Portrait of Wonjun Jo in Vancouver" src="images/profile.webp" class="profile-photo hoverZoomLink" width="240" height="320" decoding="async"></a>
+                <div class="profile-frame">
+                  <button class="profile-photo-button" type="button" aria-label="Show photo caption" aria-expanded="false" aria-controls="profile-caption">
+                    <img alt="Portrait of Wonjun Jo in Vancouver" src="images/profile.webp" class="profile-photo" width="240" height="320" decoding="async">
+                  </button>
+                  <span id="profile-caption" class="profile-caption" hidden>2023 in vancouver</span>
+                </div>
               </td>
             </tr>
           </tbody></table>
@@ -592,6 +597,30 @@ Self-Supervised Collaborative Distillation: Enhancing Lighting Robustness and 3D
     </main>
     <script>
       (function() {
+        const profileFrame = document.querySelector('.profile-frame');
+        const profileButton = document.querySelector('.profile-photo-button');
+        const profileCaption = document.getElementById('profile-caption');
+
+        function setProfileCaptionVisible(visible) {
+          profileCaption.hidden = !visible;
+          profileButton.setAttribute('aria-expanded', String(visible));
+          profileButton.setAttribute('aria-label', visible ? 'Hide photo caption' : 'Show photo caption');
+        }
+
+        profileButton.addEventListener('click', () => {
+          setProfileCaptionVisible(profileCaption.hidden);
+        });
+        document.addEventListener('click', (event) => {
+          if (!profileFrame.contains(event.target)) {
+            setProfileCaptionVisible(false);
+          }
+        });
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape') {
+            setProfileCaptionVisible(false);
+          }
+        });
+
         const buttons = document.querySelectorAll('.tab-btn');
         const panels = document.querySelectorAll('.tab-panel');
         const TAB_STORAGE_KEY = 'activeMainTab';
