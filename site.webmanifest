@@ -1,7 +1,7 @@
 {
   "name": "Wonjun Jo",
   "short_name": "Wonjun Jo",
-  "description": "Research portfolio of Wonjun Jo, focused on Embodied AI, world models, and multimodal learning.",
+  "description": "Research portfolio of Wonjun Jo, focused on learning and adaptation for embodied agents, pretrained robot policies, and reusable skills.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#f7f9fc",
