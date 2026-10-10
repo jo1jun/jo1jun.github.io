@@ -106,6 +106,7 @@
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\publicationSummary}[1]{\vspace{0.5mm}\begin{itemize}[leftmargin=0.34in, topsep=2pt, itemsep=0pt, parsep=0pt]\item \small{#1}\end{itemize}\vspace{0.5mm}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -131,6 +132,21 @@
     \item{\small \textbf{Learning and adaptation for embodied agents} through self-supervised and multimodal learning. I study adaptation of \textbf{pretrained robot policies} and acquisition of \textbf{reusable skills} from demonstrations and interaction, with interests in learning from failures, preserving prior capabilities, and generalizing to new tasks and environments.}
  \end{itemize}
 
+%-----------CURRENT RESEARCH-----------
+\section{Current Research}
+
+\noindent
+{\textbf{\underline{Wonjun Jo}}, Nam Hyeon-Woo, Yohan Park, Hyunwoo Ha, Tae-Hyun Oh,
+``When Fine-Tuning Drifts: Mitigating Policy Drift with Base Action-Field Regularization,''}
+{\textbf{\textit{Under review}}}, 2026.
+\publicationSummary{Mitigating policy drift for robust few-shot fine-tuning of pretrained robot policies.}
+    \vspace{2mm}
+
+\noindent
+{\textbf{\underline{Wonjun Jo}},
+``One-shot Teaching for Reusable Skills in Agentic Robots,''}
+{\textbf{\textit{In progress}}}.
+
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
@@ -144,12 +160,9 @@
 
 %-----------PUBLICATIONS-----------
 \newcommand{\refnumbering}[1]{\noindent[\arabic{#1}]\stepcounter{#1}~}
-\newcommand{\publicationSummary}[1]{\vspace{0.5mm}\begin{itemize}[leftmargin=0.34in, topsep=2pt, itemsep=0pt, parsep=0pt]\item \small{#1}\end{itemize}\vspace{0.5mm}}
 \newcounter{cntinter}\stepcounter{cntinter}
 \newcounter{cntdom}\stepcounter{cntdom}
-\section{Publications}
-
-\noindent\textbf{Peer-Reviewed Publications}\par\vspace{2mm}
+\section{Peer-Reviewed Publications}
 
 \refnumbering{cntinter}\,
 {\textbf{\underline{Wonjun Jo}}, Hyunwoo Ha, Kim Ji-Yeon, Hawook Jeong, Tae-Hyun Oh,
@@ -184,14 +197,6 @@
     \vspace{2mm}
 
 
-\noindent\textbf{Manuscripts Under Review}\par\vspace{2mm}
-
-\refnumbering{cntinter}\,
-{\textbf{\underline{Wonjun Jo}}, Nam Hyeon-Woo, Yohan Park, Hyunwoo Ha, Tae-Hyun Oh,
-``When Fine-Tuning Drifts: Mitigating Policy Drift with Base Action-Field Regularization,''}
-{\textcolor{gray}{\textit{Under review}}}, 2026.
-\publicationSummary{Mitigating policy drift for robust few-shot fine-tuning of pretrained robot policies.}
-
 %-----------RESEARCH EXPERIENCE-----------
 \newpage
 \section{Research Experience}
@@ -209,9 +214,6 @@
 
 %-----------SELECTED RESEARCH PROJECTS-----------
 \section{Selected Research Projects}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \item{\textbf{One-shot Teaching for Reusable Skills in Agentic Robots} \\ \small{\textbf{\underline{Wonjun Jo}} \\ \textit{In progress}}}
- \end{itemize}
     \resumeSubHeadingListStart
     \resumeProjectHeading
           {\textbf{Modular and Agentic Physical AI (KIST)}}{Jul. 2026 -- Present}
