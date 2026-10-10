@@ -119,8 +119,8 @@ body {
   position: relative;
   margin: 0 -16px;
   width: calc(100% + 32px);
-  height: clamp(220px, 30vw, 360px);
-  background: url('images/personal-hero.webp') center top / cover no-repeat;
+  height: clamp(280px, 34vw, 440px);
+  background: url('images/personal-hero.webp') center 40% / cover no-repeat;
   overflow: hidden;
 }
 
@@ -131,10 +131,10 @@ body {
   pointer-events: none;
   background: linear-gradient(
     to bottom,
-    rgba(247, 249, 252, 0.00) 24%,
-    rgba(247, 249, 252, 0.24) 52%,
-    rgba(247, 249, 252, 0.58) 72%,
-    rgba(247, 249, 252, 0.86) 88%,
+    rgba(247, 249, 252, 0.00) 52%,
+    rgba(247, 249, 252, 0.10) 68%,
+    rgba(247, 249, 252, 0.45) 84%,
+    rgba(247, 249, 252, 0.80) 94%,
     #f7f9fc 100%
   );
 }
@@ -142,7 +142,7 @@ body {
 .page-shell {
   width: 100%;
   max-width: 800px;
-  margin: -96px auto 0;
+  margin: -56px auto 0;
   position: relative;
   z-index: 1;
   box-sizing: border-box;
@@ -394,12 +394,12 @@ body {
   .top-hero {
     margin: 0 -10px;
     width: calc(100% + 20px);
-    height: 150px;
+    height: clamp(200px, 52vw, 260px);
     background-position: center center;
   }
 
   .page-shell {
-    margin-top: -80px;
+    margin-top: -36px;
   }
 
   .intro-table,
