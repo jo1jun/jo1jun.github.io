@@ -239,22 +239,26 @@ body {
 
 .interest-chips {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 6px;
+  justify-content: safe center;
+  overflow-x: auto;
+  scrollbar-width: thin;
   padding: 0;
   margin: 10px 0 4px;
   list-style: none;
 }
 
 .interest-chip {
-  padding: 4px 10px;
+  flex: 0 0 auto;
+  padding: 4px 6px;
   border: 1px solid rgba(25, 49, 72, 0.2);
   border-radius: 999px;
   color: #224663;
   background: rgba(255, 255, 255, 0.9);
   font-size: 12px;
   line-height: 1.2;
+  white-space: nowrap;
 }
 
 .tab-panel {
