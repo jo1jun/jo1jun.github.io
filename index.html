@@ -30,6 +30,8 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="preload" href="images/personal-hero.webp" as="image" type="image/webp">
     <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20261010-8">
+    <link rel="stylesheet" type="text/css" href="journey.css?v=1">
+    <script src="journey.js?v=1" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -107,6 +109,7 @@
           </tbody></table>
           <div class="section-tabs" role="tablist" aria-label="Site sections" aria-orientation="horizontal">
             <button id="tab-btn-research" class="tab-btn is-active" type="button" role="tab" aria-selected="true" aria-controls="tab-research" tabindex="0" data-tab-target="tab-research">Research</button>
+            <button id="tab-btn-journey" class="tab-btn" type="button" role="tab" aria-selected="false" aria-controls="tab-journey" tabindex="-1" data-tab-target="tab-journey">Journey</button>
             <button id="tab-btn-experience" class="tab-btn" type="button" role="tab" aria-selected="false" aria-controls="tab-experience" tabindex="-1" data-tab-target="tab-experience">Experience</button>
             <button id="tab-btn-notes" class="tab-btn" type="button" role="tab" aria-selected="false" aria-controls="tab-notes" tabindex="-1" data-tab-target="tab-notes">Notes</button>
             <button id="tab-btn-music" class="tab-btn" type="button" role="tab" aria-selected="false" aria-controls="tab-music" tabindex="-1" data-tab-target="tab-music">Music</button>
@@ -312,6 +315,117 @@ Self-Supervised Collaborative Distillation: Enhancing Lighting Robustness and 3D
     </tr>
 
           </tbody></table>
+          </div>
+
+          <div id="tab-journey" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-journey" hidden>
+            <div class="journey">
+              <header class="journey-intro">
+                <p class="journey-eyebrow">VISION &amp; JOURNEY</p>
+                <h2>From a distant goal<br>to the work I do today.</h2>
+                <p>My long-term goal is to help build embodied AI agents that carry out human goals autonomously, robustly, and across unfamiliar tasks and environments &mdash; without continuous teleoperation.</p>
+                <p>I hope to see these robots become useful in human society, then work where human access is difficult or costly. Ultimately, I want to contribute to robots that help build the first habitats in space and on Mars, supporting human settlement and, in the longer term, terraforming.</p>
+              </header>
+
+              <div class="journey-position">
+                <span class="journey-position-marker" aria-hidden="true"></span>
+                <div><strong>Where I am now</strong><p>Building on robust perception, I am working on <strong>robot policy adaptation and reusable agentic skills</strong>, alongside modular Physical AI research at KIST.</p></div>
+              </div>
+
+              <div class="journey-map-heading">
+                <h3>A goal-to-foundations map</h3>
+                <p>Read from the ambition down to its foundations. Select a layer to see the experiences behind it.</p>
+              </div>
+              <div class="journey-map">
+                <div class="journey-layers" role="tablist" aria-label="Journey capability layers, from long-term goal to foundations" aria-orientation="vertical">
+                  <button class="journey-step" type="button" id="journey-btn-space" role="tab" aria-controls="journey-space" aria-selected="false" tabindex="-1" data-journey-target="journey-space"><span class="journey-number" aria-hidden="true">01</span><span><span class="journey-state">Long-term ambition</span><span class="journey-step-title">Space &amp; extreme environments</span></span></button>
+                  <button class="journey-step" type="button" id="journey-btn-society" role="tab" aria-controls="journey-society" aria-selected="false" tabindex="-1" data-journey-target="journey-society"><span class="journey-number" aria-hidden="true">02</span><span><span class="journey-state">Future deployment</span><span class="journey-step-title">Useful robots in human society</span></span></button>
+                  <button class="journey-step journey-step-current" type="button" id="journey-btn-systems" role="tab" aria-controls="journey-systems" aria-selected="false" tabindex="-1" data-journey-target="journey-systems"><span class="journey-number" aria-hidden="true">03</span><span><span class="journey-state">Active project context</span><span class="journey-step-title">Long-horizon, integrated agents</span></span></button>
+                  <button class="journey-step journey-step-current is-selected" type="button" id="journey-btn-learning" role="tab" aria-controls="journey-learning" aria-selected="true" tabindex="0" data-journey-target="journey-learning"><span class="journey-number" aria-hidden="true">04</span><span><span class="journey-state">My current research focus</span><span class="journey-step-title">Learn, adapt &amp; reuse skills</span></span></button>
+                  <button class="journey-step journey-step-foundation" type="button" id="journey-btn-perception" role="tab" aria-controls="journey-perception" aria-selected="false" tabindex="-1" data-journey-target="journey-perception"><span class="journey-number" aria-hidden="true">05</span><span><span class="journey-state">Research foundation</span><span class="journey-step-title">Perceive under changing conditions</span></span></button>
+                  <button class="journey-step journey-step-foundation" type="button" id="journey-btn-foundations" role="tab" aria-controls="journey-foundations" aria-selected="false" tabindex="-1" data-journey-target="journey-foundations"><span class="journey-number" aria-hidden="true">06</span><span><span class="journey-state">Training &amp; experience</span><span class="journey-step-title">Engineering &amp; research practice</span></span></button>
+                </div>
+
+                <div class="journey-details">
+                  <section class="journey-detail" id="journey-space" role="tabpanel" aria-labelledby="journey-btn-space" tabindex="0" hidden>
+                    <p class="journey-eyebrow">THE LONG-TERM GOAL</p><h3>Work beyond easy human reach.</h3>
+                    <p>Robots that take high-level goals and independently perform useful work in remote, extreme, or extraterrestrial environments.</p>
+                    <p>My ultimate aspiration is to contribute to the construction and maintenance of initial habitats for human settlement, including on Mars.</p>
+                    <div class="journey-gap"><h4>What lies ahead</h4><p>Extended autonomy, recovery from unexpected failures, reliable hardware, and validation under the conditions of a real mission.</p></div>
+                    <p class="journey-boundary">This is the destination I hope to work toward; my current research is in robot learning and perception.</p>
+                  </section>
+                  <section class="journey-detail" id="journey-society" role="tabpanel" aria-labelledby="journey-btn-society" tabindex="0" hidden>
+                    <p class="journey-eyebrow">A DEPLOYMENT GOAL</p><h3>Become useful in everyday life.</h3>
+                    <p>I want embodied agents to perform tasks people actually need, in environments that are not arranged solely for a demonstration.</p>
+                    <div class="journey-gap"><h4>What I still need to work toward</h4><p>Safe operation around people, understandable behavior, dependable task completion, and learning what makes a robot genuinely useful to its users.</p></div>
+                    <h4>How my current work connects</h4><p>Cooking is a human-relevant setting in the KIST project. Policy adaptation and skill reuse address parts of the flexibility I want such robots to have.</p>
+                    <p class="journey-boundary">Real-world deployment and safety validation remain future work.</p>
+                  </section>
+                  <section class="journey-detail" id="journey-systems" role="tabpanel" aria-labelledby="journey-btn-systems" tabindex="0" hidden>
+                    <p class="journey-eyebrow">ACTIVE PROJECT CONTEXT</p><h3>Connect skills into longer tasks.</h3>
+                    <p>My path toward goal-directed agents includes connecting perception, planning, and skill execution in a modular system.</p>
+                    <ul class="journey-evidence">
+                      <li><span class="journey-record-meta">Jul. 2026 &ndash; Present · Research internship</span><h4><a href="#experience-kist" data-journey-link>KIST · Modular and Agentic Physical AI</a></h4><p>The project context spans agentic robot programming, robust vision, tactile feedback, dexterous hands, and long-horizon bimanual cooking tasks.</p></li>
+                    </ul>
+                    <div class="journey-gap"><h4>The next connection</h4><p>Relate reusable skills to task-state tracking, execution monitoring, and recovery over a complete task.</p></div>
+                    <p class="journey-boundary">This layer describes the broader project context in which I am developing my research.</p>
+                  </section>
+                  <section class="journey-detail" id="journey-learning" role="tabpanel" aria-labelledby="journey-btn-learning" tabindex="0">
+                    <p class="journey-eyebrow">MY CURRENT RESEARCH FOCUS</p><h3>Acquire new capabilities.<br>Preserve and reuse them.</h3>
+                    <p>I am exploring how pretrained robot policies can adapt, and how demonstrations can contribute reusable skills to embodied agents.</p>
+                    <ul class="journey-evidence">
+                      <li><span class="journey-record-meta">2026 · First author · Under review</span><h4><a href="#research-ftd" data-journey-link>When Fine-Tuning Drifts: Mitigating Policy Drift with Base Action-Field Regularization</a></h4><p>Policy adaptation: mitigating drift during few-shot fine-tuning of pretrained robot policies.</p></li>
+                      <li><span class="journey-record-meta">In progress</span><h4><a href="#research-one-shot-teaching" data-journey-link>One-shot Teaching for Reusable Agentic Robot Skills</a></h4><p>Skill acquisition and reuse: the ongoing direction I am pursuing.</p></li>
+                    </ul>
+                    <div class="journey-gap"><h4>What I want to connect next</h4><p>Learning from failures and transferring skills to new tasks and environments, within a longer-running agent.</p></div>
+                    <p class="journey-boundary">Manuscripts and project resources for this work are not yet public.</p>
+                  </section>
+                  <section class="journey-detail" id="journey-perception" role="tabpanel" aria-labelledby="journey-btn-perception" tabindex="0" hidden>
+                    <p class="journey-eyebrow">THE RESEARCH I BUILD ON</p><h3>Learn representations that hold up.</h3>
+                    <p>Self-supervised and multimodal learning form my foundation for studying how embodied agents cope with changing visual conditions.</p>
+                    <h4 class="journey-group-title">Publications</h4>
+                    <ul class="journey-evidence">
+                      <li><span class="journey-record-meta">2026 · RA-L · First author</span><h4><a href="#research-lacd" data-journey-link>LiDAR-Anchored Collaborative Distillation for Robust 2D Representations</a></h4><p>LiDAR-guided robustness and generalization of visual representations.</p></li>
+                      <li><span class="journey-record-meta">2026 · RA-L · Co-author</span><h4><a href="#research-darkeqa" data-journey-link>DarkQA: Benchmarking Vision-Language Models on Visual-Primitive Question Answering in Low-Light Indoor Scenes</a></h4><p>Evaluation of vision-language models under low-light conditions.</p></li>
+                      <li><span class="journey-record-meta">2025 · ICCV Wild3D Workshop · First author</span><h4><a href="#research-iccvw" data-journey-link>Self-Supervised Collaborative Distillation: Enhancing Lighting Robustness and 3D Awareness</a></h4><p>Lighting-robust and 3D-aware representations.</p></li>
+                      <li><span class="journey-record-meta">2024 · ACCV · First author</span><h4><a href="#research-accv" data-journey-link>The Devil is in the Details: Simple Remedies for Image-to-LiDAR Representation Learning</a></h4><p>Self-supervised transfer from images to LiDAR representations.</p></li>
+                    </ul>
+                    <h4 class="journey-group-title">Applied projects</h4>
+                    <ul class="journey-evidence">
+                      <li><span class="journey-record-meta">Jan. 2023 &ndash; Dec. 2024 · RideFlux-funded</span><h4>Camera&ndash;LiDAR correlation for self-supervised learning</h4><p>Representation learning for autonomous-driving perception.</p></li>
+                      <li><span class="journey-record-meta">Mar. &ndash; Dec. 2022 · ADD-funded</span><h4>Deformable object recognition</h4><p>Multi-spectral image recognition and LiDAR-based motion-vector estimation.</p></li>
+                    </ul>
+                    <h4 class="journey-group-title">Related invention records</h4>
+                    <ul class="journey-evidence">
+                      <li><span class="journey-record-meta">Filed 2024 · Granted 2025</span><h4>Collaborative distillation between 2D and 3D encoders</h4><p><a href="https://patents.google.com/patent/KR102848095B1/ko">Korean patent 10-2848095</a></p></li>
+                      <li><span class="journey-record-meta">Filed 2023</span><h4>Learning with synchronized and unsynchronized sensor data</h4><p>Korean application 10-2023-0146900.</p></li>
+                    </ul>
+                    <p class="journey-boundary">Perception is a foundation I continue to build on as I move toward robot learning.</p>
+                  </section>
+                  <section class="journey-detail" id="journey-foundations" role="tabpanel" aria-labelledby="journey-btn-foundations" tabindex="0" hidden>
+                    <p class="journey-eyebrow">TRAINING &amp; EXPERIENCE</p><h3>The foundations of my research practice.</h3>
+                    <ul class="journey-evidence">
+                      <li><span class="journey-record-meta">Mar. 2018 &ndash; Feb. 2022</span><h4>Inha University · B.S. in Computer Engineering</h4><p>My undergraduate engineering foundation.</p></li>
+                      <li><span class="journey-record-meta">Jun. &ndash; Aug. 2021</span><h4><a href="#experience-postech" data-journey-link>POSTECH · Student Internship</a></h4><p>Research experience with Prof. Tae-Hyun Oh.</p></li>
+                      <li><span class="journey-record-meta">Mar. 2022 &ndash; Present</span><h4>POSTECH · Joint M.S. &amp; Ph.D. in Electrical Engineering</h4><p>Graduate research advised by Prof. Tae-Hyun Oh.</p></li>
+                      <li><span class="journey-record-meta">Feb. 2022 &ndash; Present</span><h4>POSTECH &rarr; KAIST · Research Assistant</h4><p>My continuing research experience from Pohang to Daejeon, with Prof. Tae-Hyun Oh.</p></li>
+                    </ul>
+                    <p class="journey-boundary">These experiences support the research layers above and continue to shape how I work.</p>
+                  </section>
+                </div>
+              </div>
+              <p class="journey-map-note">A personal capability map, not a fixed timeline or a completion score. The layers overlap, and foundational research continues alongside current work.</p>
+
+              <section class="journey-community" aria-labelledby="journey-community-title">
+                <p class="journey-eyebrow">ALONGSIDE THE TECHNICAL PATH</p>
+                <h3 id="journey-community-title">Learning with a research community.</h3>
+                <p>Some experiences support the whole journey rather than a single robot capability.</p>
+                <div class="journey-community-grid">
+                  <div><h4>Reviewing &amp; teaching</h4><ul><li>ICRA reviewer, 2023</li><li>The Visual Computer reviewer, 2023</li><li>Introduction to Machine Learning (EECE454), POSTECH</li></ul></div>
+                  <div><h4>Conferences &amp; summer school</h4><ul><li><a href="#photo-subtab-accv" data-journey-link>ACCV 2024 · Hanoi</a></li><li><a href="#photo-subtab-icvss" data-journey-link>ICVSS 2025 · Sicily</a></li><li><a href="#photo-subtab-iccv" data-journey-link>ICCV 2025 · Honolulu</a></li></ul></div>
+                </div>
+                <p class="journey-personal">Outside the research map: <a href="#tab-music" data-journey-link>Music</a> and <a href="#tab-photo" data-journey-link>Photo</a> hold a more personal side of the journey.</p>
+              </section>
+            </div>
           </div>
 
           <div id="tab-experience" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-experience" hidden>
@@ -778,6 +892,37 @@ Self-Supervised Collaborative Distillation: Enhancing Lighting Robustness and 3D
           ? storedPhotoSubtabId
           : 'photo-subtab-accv';
         activateSubtab(initialPhotoSubtabId, { save: false });
+
+        // Journey evidence links reveal the relevant main tab and photo subtab.
+        function revealHashTarget(targetId, options) {
+          const target = document.getElementById(targetId);
+          if (!target) return;
+          const panel = target.closest('.tab-panel');
+          if (!panel) return;
+          const opts = options || {};
+          activateTab(panel.id, { save: opts.save !== false, updateHash: false });
+          const photoPanel = target.closest('.subtab-panel');
+          if (photoPanel) activateSubtab(photoPanel.id, { save: opts.save !== false });
+          if (opts.focus) {
+            if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
+            target.focus({ preventScroll: true });
+          }
+          if (opts.scroll) target.scrollIntoView({ block: 'start' });
+        }
+
+        document.querySelectorAll('[data-journey-link]').forEach((link) => {
+          link.addEventListener('click', (event) => {
+            if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || event.button !== 0) return;
+            event.preventDefault();
+            const targetId = link.hash.slice(1);
+            history.pushState(null, '', link.hash);
+            revealHashTarget(targetId, { focus: true, scroll: true });
+          });
+        });
+        window.addEventListener('hashchange', () => {
+          revealHashTarget(window.location.hash.slice(1), { scroll: true });
+        });
+        if (hashTabId) revealHashTarget(hashTabId, { save: false });
       })();
     </script>
   </body>
