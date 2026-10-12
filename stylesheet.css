@@ -675,6 +675,10 @@ h2 {
   padding: 16px;
 }
 
+.experience-logo-wordmark {
+  object-fit: cover;
+}
+
 .fade {
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
