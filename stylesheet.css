@@ -702,6 +702,38 @@ h2 {
   font-size: 14px;
 }
 
+.infrastructure-group--with-photo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 200px;
+  gap: 20px;
+  align-items: start;
+}
+
+.infrastructure-photo {
+  width: 100%;
+  max-width: 240px;
+  margin: 0;
+}
+
+.infrastructure-photo a {
+  display: block;
+}
+
+.infrastructure-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.infrastructure-photo figcaption {
+  margin-top: 6px;
+  color: #475766;
+  font-size: 12px;
+  line-height: 1.4;
+  text-align: center;
+}
+
 .fade {
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
@@ -760,6 +792,11 @@ span.highlight {
 }
 
 @media (max-width: 700px) {
+  .infrastructure-group--with-photo {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
   .one {
     max-width: 320px;
     height: 190px;
