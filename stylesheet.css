@@ -499,6 +499,9 @@ body {
   }
 
   .interest-chips {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    justify-content: center;
     gap: 6px;
   }
 
