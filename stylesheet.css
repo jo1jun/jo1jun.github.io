@@ -691,6 +691,17 @@ h2 {
   margin-top: 4px;
 }
 
+.infrastructure-groups {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+}
+
+.infrastructure-group h3 {
+  margin: 0;
+  font-size: 14px;
+}
+
 .fade {
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
