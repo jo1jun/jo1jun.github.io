@@ -11,6 +11,7 @@ cv/*.out
 cv/*.synctex.gz
 
 # Unpublished research must stay outside this public repository.
-/cvpr27/
-/papers/2434_When_Fine_Tuning_Drifts_M.pdf
 /private/
+
+# Local git hooks (wired via core.hooksPath); kept out of the public tree.
+.githooks/
