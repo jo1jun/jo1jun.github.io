@@ -87,6 +87,69 @@ a:hover {
   margin: 0 6px;
 }
 
+.email-control {
+  display: inline-block;
+  position: relative;
+}
+
+.email-copy {
+  appearance: none;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: #1772d0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.email-copy:hover,
+.email-copy:focus {
+  color: #8a4500;
+  text-decoration: underline;
+}
+
+.email-copy:focus-visible,
+.email-fallback:focus-visible {
+  outline: 2px solid #2b557b;
+  outline-offset: 3px;
+}
+
+.email-feedback {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 5;
+  white-space: nowrap;
+  pointer-events: none;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.email-feedback:not(:empty) {
+  padding: 6px 10px;
+  border-radius: 5px;
+  background: #1d3954;
+  color: #fff;
+  box-shadow: 0 3px 12px rgba(17, 34, 51, 0.15);
+}
+
+.email-fallback {
+  position: absolute;
+  top: calc(100% + 40px);
+  left: 0;
+  z-index: 5;
+  width: 220px;
+  max-width: 75vw;
+  box-sizing: border-box;
+  padding: 8px;
+  border: 1px solid #bccbd8;
+  border-radius: 5px;
+  background: #fff;
+  color: #17344c;
+  font: inherit;
+  font-size: 16px;
+}
+
 a:focus-visible,
 .tab-btn:focus-visible,
 .subtab-btn:focus-visible {
