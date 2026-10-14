@@ -679,6 +679,18 @@ h2 {
   object-fit: cover;
 }
 
+.experience-details {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: #475766;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.experience-details li + li {
+  margin-top: 4px;
+}
+
 .fade {
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
