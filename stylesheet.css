@@ -786,16 +786,35 @@ h2 {
   display: block;
 }
 
-.infrastructure-photo img,
-.infrastructure-photo video {
+.infrastructure-photo img {
   display: block;
   width: 100%;
   height: auto;
   border-radius: 6px;
 }
 
-.infrastructure-photo video {
-  background: #14202b;
+.infrastructure-demo-frame {
+  position: relative;
+}
+
+.infrastructure-demo-toggle {
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid #ffffff80;
+  border-radius: 5px;
+  background: #14202bcc;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.infrastructure-demo-toggle:focus-visible {
+  outline: 2px solid #2b557b;
+  outline-offset: 2px;
 }
 
 @media (max-width: 540px) {

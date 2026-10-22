@@ -28,7 +28,7 @@
     <link rel="icon" href="images/favicon.png" type="image/png" sizes="64x64">
     <link rel="manifest" href="site.webmanifest">
     <link rel="preload" href="images/personal-hero.webp" as="image" type="image/webp">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20261022-1">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20261022-2">
     <script src="scripts/email-contact.js?v=20261015-1" defer></script>
     <script type="application/ld+json">
       {
@@ -416,10 +416,10 @@ Self-Supervised Collaborative Distillation: Enhancing Lighting Robustness and 3D
                       <figcaption><span class="infrastructure-photo-label">Bi-Nero + Revo2 Touch</span></figcaption>
                     </figure>
                     <figure id="kist-block-stacking" class="infrastructure-photo infrastructure-demo">
-                      <video controls muted playsinline preload="none" poster="images/kist-block-stacking-poster-v2.webp" width="720" height="1280" aria-label="Franka Research 3 stacking blocks at KIST" aria-describedby="kist-block-stacking-caption">
-                        <source src="videos/kist-block-stacking-3x.mp4" type="video/mp4">
-                        <a href="videos/kist-block-stacking-3x.mp4">Watch the block-stacking demo.</a>
-                      </video>
+                      <div class="infrastructure-demo-frame">
+                        <img id="kist-demo-image" src="images/kist-block-stacking-poster-v2.webp" data-animated-src="images/kist-block-stacking.gif" data-static-src="images/kist-block-stacking-poster-v2.webp" alt="Franka Research 3 stacking blocks at KIST" width="252" height="448" loading="lazy" decoding="async">
+                        <button id="kist-demo-toggle" class="infrastructure-demo-toggle" type="button" aria-controls="kist-demo-image" aria-label="Pause block-stacking animation" hidden>Ⅱ</button>
+                      </div>
                       <figcaption id="kist-block-stacking-caption"><span class="infrastructure-photo-label">Block stacking!</span></figcaption>
                     </figure>
                   </div>
@@ -690,6 +690,24 @@ Self-Supervised Collaborative Distillation: Enhancing Lighting Robustness and 3D
           if (event.matches) setTeaserPlaying(false);
         });
 
+        const demoImage = document.getElementById('kist-demo-image');
+        const demoToggle = document.getElementById('kist-demo-toggle');
+        let demoPlaying = false;
+
+        function setDemoPlaying(playing) {
+          demoPlaying = playing;
+          demoImage.src = playing ? demoImage.dataset.animatedSrc : demoImage.dataset.staticSrc;
+          demoToggle.textContent = playing ? 'Ⅱ' : '▶';
+          demoToggle.setAttribute('aria-label', playing ? 'Pause block-stacking animation' : 'Play block-stacking animation');
+        }
+
+        demoToggle.hidden = false;
+        setDemoPlaying(!teaserMotionPreference.matches);
+        demoToggle.addEventListener('click', () => setDemoPlaying(!demoPlaying));
+        teaserMotionPreference.addEventListener('change', event => {
+          if (event.matches) setDemoPlaying(false);
+        });
+
         const profileFrame = document.querySelector('.profile-frame');
         const profileButton = document.querySelector('.profile-photo-button');
         const profileCaption = document.getElementById('profile-caption');
@@ -748,9 +766,6 @@ Self-Supervised Collaborative Distillation: Enhancing Lighting Robustness and 3D
             const active = panel.id === targetId;
             panel.classList.toggle('is-active', active);
             panel.hidden = !active;
-            if (!active) {
-              panel.querySelectorAll('video').forEach((video) => video.pause());
-            }
           });
           if (opts.save !== false) {
             writeStorage(TAB_STORAGE_KEY, targetId);
