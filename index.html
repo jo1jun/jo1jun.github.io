@@ -28,7 +28,7 @@
     <link rel="icon" href="images/favicon.png" type="image/png" sizes="64x64">
     <link rel="manifest" href="site.webmanifest">
     <link rel="preload" href="images/personal-hero.webp" as="image" type="image/webp">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20261015-1">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20261022-1">
     <script src="scripts/email-contact.js?v=20261015-1" defer></script>
     <script type="application/ld+json">
       {
@@ -415,6 +415,13 @@ Self-Supervised Collaborative Distillation: Enhancing Lighting Robustness and 3D
                       </a>
                       <figcaption><span class="infrastructure-photo-label">Bi-Nero + Revo2 Touch</span></figcaption>
                     </figure>
+                    <figure id="kist-block-stacking" class="infrastructure-photo infrastructure-demo">
+                      <video controls muted playsinline preload="none" poster="images/kist-block-stacking-poster.webp" width="720" height="1280" aria-label="Franka Research 3 stacking blocks at KIST, shown at twice the original speed" aria-describedby="kist-block-stacking-caption">
+                        <source src="videos/kist-block-stacking-2x.mp4" type="video/mp4">
+                        <a href="videos/kist-block-stacking-2x.mp4">Watch the block-stacking demo (2× speed).</a>
+                      </video>
+                      <figcaption id="kist-block-stacking-caption"><span class="infrastructure-photo-label">Block stacking!</span><span>2× speed</span></figcaption>
+                    </figure>
                   </div>
                 </div>
                 <div class="infrastructure-group">
@@ -741,6 +748,9 @@ Self-Supervised Collaborative Distillation: Enhancing Lighting Robustness and 3D
             const active = panel.id === targetId;
             panel.classList.toggle('is-active', active);
             panel.hidden = !active;
+            if (!active) {
+              panel.querySelectorAll('video').forEach((video) => video.pause());
+            }
           });
           if (opts.save !== false) {
             writeStorage(TAB_STORAGE_KEY, targetId);

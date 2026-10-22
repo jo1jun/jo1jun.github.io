@@ -770,10 +770,10 @@ h2 {
 
 .infrastructure-photos {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 4fr) minmax(0, 4fr) minmax(0, 3fr);
   gap: 16px;
   align-items: start;
-  max-width: 440px;
+  max-width: 620px;
   margin-top: 16px;
 }
 
@@ -786,11 +786,28 @@ h2 {
   display: block;
 }
 
-.infrastructure-photo img {
+.infrastructure-photo img,
+.infrastructure-photo video {
   display: block;
   width: 100%;
   height: auto;
   border-radius: 6px;
+}
+
+.infrastructure-photo video {
+  background: #14202b;
+}
+
+@media (max-width: 540px) {
+  .infrastructure-photos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .infrastructure-demo {
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 212px;
+  }
 }
 
 .infrastructure-photo figcaption {
