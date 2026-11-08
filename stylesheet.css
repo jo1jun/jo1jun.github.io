@@ -214,6 +214,79 @@ body {
   box-shadow: 0 14px 38px rgba(17, 34, 51, 0.1);
 }
 
+/* A quiet return to space after the light content panel. Keep Earth uncropped. */
+.pale-blue-dot {
+  margin: 0 -16px -40px;
+  padding: 180px 24px 56px;
+  background: linear-gradient(to bottom, #f7f9fc, #8b929d 65px, #252b35 125px, #090c12 180px);
+  color: #e7edf5;
+  text-align: center;
+}
+
+.pale-blue-dot-figure {
+  width: min(100%, 453px);
+  margin: 0 auto;
+}
+
+.pale-blue-dot-image {
+  display: block;
+  position: relative;
+  line-height: 0;
+}
+
+.pale-blue-dot-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* Feather only the outer edges, never the small Earth inside the image. */
+  mask-image: linear-gradient(to bottom, transparent, #000 8%, #000 90%, transparent);
+}
+
+.earth-marker {
+  position: absolute;
+  left: 76.4%;
+  top: 56.4%;
+  width: 20px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(221, 237, 255, 0.7);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.earth-marker span {
+  position: absolute;
+  left: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-shadow: 0 1px 4px #000;
+}
+
+.pale-blue-dot h2 {
+  margin: 22px 0 6px;
+  color: inherit;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+
+.pale-blue-dot figcaption p {
+  margin: 0;
+  color: #9daabb;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+}
+
+.pale-blue-dot-image:focus-visible {
+  outline: 2px solid #c1d9f4;
+  outline-offset: 6px;
+}
+
 .intro-table,
 .entry-table,
 .layout-table,
